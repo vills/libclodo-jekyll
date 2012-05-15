@@ -85,7 +85,16 @@
 		<div class="categoryhead"><b>Разделы базы знаний</b></div>
 
 			{% for cat in site.categories %}
-				<div class="category1item"><a href="/{{ cat | first }}">{{ cat | first }}</a></div>
+				{% capture current %}{{ cat | first }}{% endcapture %}
+				<div class="category1item"><a href="/{{ current }}">{{ current }}</a></div>
+
+				{% if current == page.category %}
+					<div class="category2item">
+						{% for post in cat[1] %}
+								<div class="category1item"><a href="{{ post.url }}">{{ post.title }}</a></div>
+						{% endfor %}
+					</div>
+				{% endif %}
 			{% endfor %}
 				
 		</div>
