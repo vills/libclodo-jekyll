@@ -4,7 +4,13 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>{{ page.title }}</title>
+	
+	{% if page.title == "" %}
+		<title>База знаний ~ Clodo.ru - облачный хостинг виртуальных ресурсов VDS/VPS</title>
+	{% else %}
+		<title>{{ page.title }}</title>
+	{% endif %}
+
 	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
 	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
 	<link rel="stylesheet" href="http://lib.clodo.ru/css/admin/pstyle.css" type="text/css" media="screen" />
@@ -80,15 +86,6 @@
 				<div class="cashflow">
 
 		<div class="categoryhead"><b>Разделы базы знаний</b></div>
-
-
-
-<!--
-	{% for cat in page.categories %}
-		<p>{{ (page.categories | first) }}
-	{% endfor %}
--->
-
 			{% for cat in site.categories %}
 				{% capture current %}{{ cat | first }}{% endcapture %}
 				<div class="category1item"><a href="/{{ cat | first }}">{{ current }}</a></div>
@@ -101,7 +98,6 @@
 					</div>
 				{% endif %}
 
-
 			{% endfor %}
 				
 		</div>
@@ -112,21 +108,19 @@
 				<div class="contentcolumn" style="margin-left: 0;">
 					<div class="innertube">
 
-
+						<!-- TOP NAVIBAR _ START-->
 						<div class="crosh">
 							<a href="/">База знаний</a> ::
 							<a href="/{{ page.categories | first }}">{{ page.categories | first }}</a> :: 
 							{{ page.title }}
 						</div>
-
+						<!-- TOP NAVIBAR _ END-->
 
 	{{ content }}
 
-
-
-<h6 class="usl">Условия использования документа</h6>
-<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
-<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+						<h6 class="usl">Условия использования документа</h6>
+						<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+						<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
 
 					</div>
 				</div>

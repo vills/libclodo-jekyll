@@ -4,7 +4,13 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>{{ page.title }}</title>
+
+	{% if page.title == "" %}
+		<title>База знаний ~ Clodo.ru - облачный хостинг виртуальных ресурсов VDS/VPS</title>
+	{% else %}
+		<title>{{ page.title }}</title>
+	{% endif %}
+	
 	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
 	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
 	<link rel="stylesheet" href="http://lib.clodo.ru/css/admin/pstyle.css" type="text/css" media="screen" />
@@ -81,24 +87,24 @@
 
 
 
-<!-- LEFT MENU -->
-		<div class="categoryhead"><b>Разделы базы знаний</b></div>
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
 
-			{% for cat in site.categories %}
-				{% capture current %}{{ cat | first }}{% endcapture %}
-				<div class="category1item"><a href="/{{ current }}">{{ current }}</a></div>
+						{% for cat in site.categories %}
+							{% capture current %}{{ cat | first }}{% endcapture %}
+							<div class="category1item"><a href="/{{ current }}">{{ current }}</a></div>
 
-				{% if current == page.category %}
-					<div class="category2item">
-						{% for post in cat[1] %}
-								<div class="category1item"><a href="{{ post.url }}">{{ post.title }}</a></div>
+							{% if current == page.category %}
+								<div class="category2item">
+									{% for post in cat[1] %}
+											<div class="category1item"><a href="{{ post.url }}">{{ post.title }}</a></div>
+									{% endfor %}
+								</div>
+							{% endif %}
 						{% endfor %}
+							
 					</div>
-				{% endif %}
-			{% endfor %}
-				
-		</div>
-<!-- !LEFT MENU -->
+					<!-- !LEFT MENU -->
 
 				</div>
 				</td>
@@ -107,14 +113,7 @@
 				<div class="contentcolumn" style="margin-left: 0;">
 					<div class="innertube">
 
-
-
-
 	{{ content }}
-
-
-
-
 
 					</div>
 				</div>
