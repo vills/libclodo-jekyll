@@ -65,9 +65,25 @@ module Jekyll
       # Set the title for this page.
       title_prefix             = site.config['category_title_prefix'] || ''
       self.data['title']       = "#{title_prefix}#{category}"
+
+=begin
       # Set the meta-description for this page.
       meta_description_prefix  = site.config['category_meta_description_prefix'] || 'Category: '
-      self.data['description'] = "#{meta_description_prefix}#{category}"
+      self.data['description'] = "#{meta_description_prefix}#{category} . . . . "
+=end
+
+      # Set custom description for this page
+        @desc = ''
+        begin
+            @f = File.open(File.join(base, '_categories_descriptions', "/#{category}"), "r")
+            @f.each_line do |line|
+                @desc += line
+            end
+        rescue
+            nil
+        end
+
+        self.data['description']  = @desc
     end
     
   end
