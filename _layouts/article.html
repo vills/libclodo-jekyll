@@ -82,18 +82,26 @@
 		<div class="categoryhead"><b>Разделы базы знаний</b></div>
 
 
-			{% for cat in site.iterable.categories %}
-				<div class="category1item"><a href="/{{ cat | first }}">{{ cat | first }}</a></div>
-			{% endfor %}
+
+<!--
+	{% for cat in page.categories %}
+		<p>{{ (page.categories | first) }}
+	{% endfor %}
+-->
 
 			{% for cat in site.categories %}
 				<div class="category1item"><a href="/{{ cat | first }}">{{ cat | first }}</a></div>
 
-				<div class="category2item">
-					{% for post in cat[1] %}
-							<div class="category1item"><a href="{{ post.url }}">{{ post.title }}</a></div>
-					{% endfor %}
-				</div>
+				{% if (page.categories|first) == (cat|first) %}
+					. . .. . 
+				{% endif %}
+					<div class="category2item">
+						{% for post in cat[1] %}
+								<div class="category1item"><a href="{{ post.url }}">{{ post.title }}</a></div>
+						{% endfor %}
+					</div>
+
+
 			{% endfor %}
 				
 		</div>
@@ -104,6 +112,12 @@
 				<div class="contentcolumn" style="margin-left: 0;">
 					<div class="innertube">
 
+
+						<div class="crosh">
+							<a href="/">База знаний</a> ::
+							<a href="/{{ page.categories | first }}">{{ page.categories | first }}</a> :: 
+							{{ page.title }}
+						</div>
 
 
 	{{ content }}

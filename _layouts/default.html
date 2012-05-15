@@ -79,24 +79,18 @@
 				<div class="balanceblock">
 				<div class="cashflow">
 
+
+
+<!-- LEFT MENU -->
 		<div class="categoryhead"><b>Разделы базы знаний</b></div>
-
-
-			{% for cat in site.iterable.categories %}
-				<div class="category1item"><a href="/{{ cat | first }}">{{ cat | first }}</a></div>
-			{% endfor %}
 
 			{% for cat in site.categories %}
 				<div class="category1item"><a href="/{{ cat | first }}">{{ cat | first }}</a></div>
-
-				<div class="category2item">
-					{% for post in cat[1] %}
-							<div class="category1item"><a href="{{ post.url }}">{{ post.title }}</a></div>
-					{% endfor %}
-				</div>
 			{% endfor %}
 				
 		</div>
+<!-- !LEFT MENU -->
+
 				</div>
 				</td>
 				<td valign="top" width="80%" class="maintd">
