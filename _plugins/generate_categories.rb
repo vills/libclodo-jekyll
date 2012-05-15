@@ -75,7 +75,7 @@ module Jekyll
       # Set custom description for this page
         @desc = ''
         begin
-            @f = File.open(File.join(base, '_categories_descriptions', "/#{category}"), "r")
+            @f = File.open(File.join(base, '_categories_descriptions', "/#{category}.html"), "r")
             @f.each_line do |line|
                 @desc += line
             end
