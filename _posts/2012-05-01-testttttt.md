@@ -1,7 +1,7 @@
 ---
-title: asd as dsff  dd d d d
+title: article-2
 layout: article
-category: clodo2category
+category: First steps
 ---
 
 

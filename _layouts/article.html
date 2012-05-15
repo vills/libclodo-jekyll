@@ -81,44 +81,20 @@
 
 		<div class="categoryhead"><b>Разделы базы знаний</b></div>
 
+
+			{% for cat in site.iterable.categories %}
+				<div class="category1item"><a href="/{{ cat | first }}">{{ cat | first }}</a></div>
+			{% endfor %}
+
 			{% for cat in site.categories %}
 				<div class="category1item"><a href="/{{ cat | first }}">{{ cat | first }}</a></div>
 
-				{% for post in site.categories.clodo %}
-						<div class="category1item"><a href="{{ post.url }}">{{ post.title }}</a></div>
-				{% endfor %}
+				<div class="category2item">
+					{% for post in cat[1] %}
+							<div class="category1item"><a href="{{ post.url }}">{{ post.title }}</a></div>
+					{% endfor %}
+				</div>
 			{% endfor %}
-
-
-
-<!--
-			{% for post in site.posts %}
-				<div class="category1item"><a href="{{ post.url }}">{{ post.title }}</a></div>
-			{% endfor %}
--->
-
-		
-		<!--
-			<div class="category1item"><a href="/clodo/">Хостинг Clodo.ru</a></div>
-				
-			<div class="category1item"><a href="/cloud-storage/">Облачное хранилище</a></div>
-				
-			<div class="category1item"><a href="/vps-control-panel/">Панели управления VPS</a></div>
-				
-			<div class="category1item"><a href="/getting-started/">Первые шаги</a></div>
-				
-			<div class="category1item"><a href="/linux/">Используем Linux</a></div>
-				
-			<div class="category1item"><a href="/cms/">Популярные CMS</a></div>
-				
-			<div class="category1item"><a href="/web-server/">Web Server</a></div>
-				
-			<div class="category1item"><a href="/email/">Email</a></div>
-				
-			<div class="category1item"><a href="/linux-security/">Безопасность</a></div>
-				
-			<div class="category1item"><a href="/network/">Сеть</a></div>
-		-->
 				
 		</div>
 				</div>
@@ -127,7 +103,6 @@
 			<div class="contentwrapper">
 				<div class="contentcolumn" style="margin-left: 0;">
 					<div class="innertube">
-
 
 
 
