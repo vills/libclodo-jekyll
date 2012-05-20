@@ -1,7 +1,11 @@
 #!/usr/bin/env ruby
 #coding: UTF-8
 
-category_links = {
-	"Хостинг Clodo.ru" => "clodo-hosting",
-	"Облачное хранилище" => "cloud-storage"
-}
+def category_links
+	{
+		"Хостинг Clodo.ru" => "clodo-hosting",
+		"Облачное хранилище" => "cloud-storage",
+		"First steps" => "steps",
+		"Новая категория" => "new_cat"
+	}
+end

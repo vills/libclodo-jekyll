@@ -1,3 +1,5 @@
+#coding: UTF-8
+
 # Jekyll category page generator.
 # http://recursive-design.com/projects/jekyll-plugins/
 #
@@ -91,6 +93,15 @@ module Jekyll
   
   # The Site class is a built-in Jekyll class with access to global site config information.
   class Site
+
+      def catname2link(category)
+        require "#{self.source}/_catlinks"
+        
+        t = category_links.invert.key(category)
+
+        return category if t.nil?
+        t
+      end
     
     # Creates an instance of CategoryIndex for each category page, renders it, and 
     # writes the output to a file.
@@ -110,7 +121,7 @@ module Jekyll
       if self.layouts.key? 'category_index'
         dir = self.config['category_dir'] || ''
         self.categories.keys.each do |category|
-          self.write_category_index(File.join(dir, category), category)
+          self.write_category_index(File.join(dir, self.catname2link(category)), category)
           #self.write_category_index(dir, category)
         end
         

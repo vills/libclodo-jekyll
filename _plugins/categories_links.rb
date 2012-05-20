@@ -1,34 +1,12 @@
 #coding: UTF-8
 module Jekyll
-	class Site
-	    def catname2link(category)
-	      category_links = {
-	        "Хостинг Clodo.ru" => "clodo-hosting",
-	        "Облачное хранилище" => "cloud-storage",
-	        "First steps" => "steps"
-	      }
-	      #require '/Users/villsrk/clodo/libclodo-jekyll/_catlinks'
 
-	      p category
-	      
-	      t = category_links.invert.key(category)
-
-	      return category if t.nil?
-	      t
-	    end
-    end
 
 	class Post
 		def catname2link(category)
-			category_links = {
-				"Хостинг Clodo.ru" => "clodo-hosting",
-				"Облачное хранилище" => "cloud-storage",
-				"First steps" => "steps"
-			}
-			#require '/Users/villsrk/clodo/libclodo-jekyll/_catlinks'
+			require "#{self.site.source}/_catlinks"
 			
 			t = category_links.invert.key(category)
-
 			return category if t.nil?
 			t
 		end

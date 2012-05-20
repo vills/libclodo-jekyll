@@ -1,7 +1,7 @@
 ---
 title: Впао ывыв ыв
 layout: article
-category: First steps
+category: Новая категория
 ---
 
 
