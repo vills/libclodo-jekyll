@@ -1,7 +1,7 @@
 ---
 title: Впао ывыв ыв
 layout: article
-category: Новая категория
+category: Хостинг Clodo.ru
 ---
 
 
