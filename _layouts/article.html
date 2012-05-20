@@ -88,7 +88,7 @@
 		<div class="categoryhead"><b>Разделы базы знаний</b></div>
 			{% for cat in site.categories %}
 				{% capture current %}{{ cat | first }}{% endcapture %}
-				<div class="category1item"><a href="/{{ cat | first }}">{{ current }}</a></div>
+				<div class="category1item"><a href="/{{ current | catname2link }}">{{ current }}</a></div>
 
 				{% if current == page.category %}
 					<div class="category2item">
@@ -111,7 +111,7 @@
 						<!-- TOP NAVIBAR _ START-->
 						<div class="crosh">
 							<a href="/">База знаний</a> ::
-							<a href="/{{ page.categories | first }}">{{ page.categories | first }}</a> :: 
+							<a href="/{{ page.categories | first | catname2link }}">{{ page.categories | first }}</a> :: 
 							{{ page.title }}
 						</div>
 						<!-- TOP NAVIBAR _ END-->

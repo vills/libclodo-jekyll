@@ -86,24 +86,12 @@
 				<div class="cashflow">
 
 
-						{% for c in site.categories_links %}
-						<p>{{ c }}</p>
-						{% endfor %}
-
-
-						{% for cat in site.categories %}
-							{% capture current %}{{ cat | first }}{% endcapture %}
-							<div class="category1item"><a href="/{{ current }}">{{ current }}</a></div>
-
-						{% endfor %}
-
-
 					<!-- LEFT MENU -->
 					<div class="categoryhead"><b>Разделы базы знаний</b></div>
 
 						{% for cat in site.categories %}
 							{% capture current %}{{ cat | first }}{% endcapture %}
-							<div class="category1item"><a href="/{{ current }}">{{ current }}</a></div>
+							<div class="category1item"><a href="/{{ current | catname2link }}">{{ current }}</a></div>
 
 							{% if current == page.category %}
 								<div class="category2item">
