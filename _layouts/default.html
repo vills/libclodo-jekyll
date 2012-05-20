@@ -86,6 +86,11 @@
 				<div class="cashflow">
 
 
+						{% for c in site.categories_links %}
+						<p>{{ c }}</p>
+						{% endfor %}
+
+
 						{% for cat in site.categories %}
 							{% capture current %}{{ cat | first }}{% endcapture %}
 							<div class="category1item"><a href="/{{ current }}">{{ current }}</a></div>
