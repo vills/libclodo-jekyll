@@ -1,12 +1,16 @@
-#!/usr/bin/env ruby
 #coding: UTF-8
 
 def category_links
 	{
-		"Хостинг Clodo.ru" => "clodo-hosting",
-		"Облачное хранилище" => "cloud-storage",
-		"First steps" => "steps",
-		"Новая категория" => "new_cat",
-		"Using Linux" => "using-linux"
+		"Хостинг Clodo.ru" 		=> "clodo",
+		"Облачное хранилище"	=> "cloud-storage",
+		"Панели управления VPS"	=> "vps-control-panel",
+		"Первые шаги"			=> "getting-started",
+		"Используем Linux"		=> "linux",
+		"Популярные CMS"		=> "cms",
+		"Web Server"			=> "web-server",
+		"Email"					=> "email",
+		"Безопасность"			=> "linux-security",
+		"Сеть"					=> "network",
 	}
 end
