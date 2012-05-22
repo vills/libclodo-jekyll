@@ -368,6 +368,30 @@
 		font-family: "Courier New", monospace;
 		font-size: 14px;
 	}
+
+	.innertube blockquote {
+		background-color: #f8f8f8;
+		border: solid 1px #ccc;
+		margin: 0;
+		padding: 15px 20px;
+		font-family: "Courier New", monospace;
+		font-size: 14px;
+	}
+	.innertube blockquote p {
+		margin: 0px;
+		padding: 0px;
+	}
+	.innertube pre {
+		background: #122312;
+		color: #fff;
+		padding: 15px 20px;
+		font-family: "Courier New", monospace;
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+
+
 	.innertubeleft {
 		margin: 20px 0 20px 30px;
 	}
@@ -1173,6 +1197,19 @@
 		margin-top: 0px;
 		font-size: 20px;
 	}
+
+	ul#markdown-toc {
+		list-style-type: none;
+		border: solid 1px #ccc;
+		font-size: 18px;
+		padding: 15px 20px;
+		background: #fcfcfc;
+		margin: 25px 0;
+	}
+
+
+
+
 	div.crosh {
 		padding-bottom: 10px;
 		border-bottom: solid 1px #ccc;

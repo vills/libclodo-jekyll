@@ -12,5 +12,7 @@ def category_links
 		"Email"					=> "email",
 		"Безопасность"			=> "linux-security",
 		"Сеть"					=> "network",
+
+		"Тестовая категория"	=> "testcategory",
 	}
 end
