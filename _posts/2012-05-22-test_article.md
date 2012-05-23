@@ -46,6 +46,14 @@ category: Тестовая категория
 > route add default gw 192.168.1.1 eth0
 
 
+Таблица
+-------
+
+| поле 11 | поле 12 |
+| поле 21 | поле 22 |
+| поле 31 | поле 32 |
+
+
 Для выделения кода используйте вначале строки 4 пробела или 1 Tab:
 
 	cp /etc/sysconfig/network-scripts/ifcfg-eth0 /etc/sysconfig/network-scripts/ifcfg-eth0:0
