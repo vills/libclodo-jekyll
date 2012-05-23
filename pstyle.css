@@ -1207,10 +1207,10 @@
 		margin: 25px 0;
 	}
 
-	table tr {
+	.contentwrapper table tr {
 		border-right: 1px solid #999;
 	}
-	table td {
+	.contentwrapper table td {
 		vertical-align: top;
 		border-bottom: 1px solid #eee;
 		padding: 0px 3px 3px;
