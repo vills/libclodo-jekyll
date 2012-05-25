@@ -500,76 +500,213 @@ category: Используем Linux
 
 * установить пакет с выводом сообщений и прогресс-бара
 
-rpm -ivh package.rpm
+        rpm -ivh package.rpm
 * установить пакет с выводом сообщений и прогресс-бара без контроля зависимостей
 
-rpm -ivh --nodeps package.rpm
+        rpm -ivh --nodeps package.rpm
 * обновить пакет без изменений конфигурационных файлов, в случае отсутствия пакета, он будет установлен
 
-rpm -U package.rpm
+        rpm -U package.rpm
 * обновить пакет только если он установлен
 
-rpm -F package.rpm
+        rpm -F package.rpm
 * удалить пакет
 
-rpm -e package_name.rpm
+        rpm -e package_name.rpm
 * отобразить список всех пакетов, установленных в системе
 
-rpm -qa
+        rpm -qa
 * среди всех пакетов, установленных в системе, найти пакет содержащий в своём имени «httpd»
 
-rpm -qa | grep httpd
+        rpm -qa | grep httpd
 * вывести информацию о конкрентном пакете
 
-rpm -qi package_name
+        rpm -qi package_name
 * отобразить пакеты входящие в группу пакетов
 
-rpm -qg "System Environment/Daemons"
+        rpm -qg "System Environment/Daemons"
 * вывести список файлов, входящих в пакет
 
-rpm -ql package_name
+        rpm -ql package_name
 * вывести список конфигурационных файлов, входящих в пакет
 
-rpm -qc package_name
+        rpm -qc package_name
 * вывести список пакетов, необходимых для установки конкретного пакета по зависимостям
 
-rpm -q package_name --whatrequires
+        rpm -q package_name --whatrequires
 * отобразить скрипты, запускаемые при установке/удалении пакета
 
-rpm -q package_name --scripts
+        rpm -q package_name --scripts
 * вывести историю ревизий пакета
 
-rpm -q package_name --changelog
+        rpm -q package_name --changelog
 * проверить какому пакету принадлежит указанный файл. Указывать следует полный путь и имя файла
 
-rpm -qf /etc/httpd/conf/httpd.conf
+        rpm -qf /etc/httpd/conf/httpd.conf
 * отображает список файлов, входящих в пакет, но ещё не установленных в систему
 
-rpm -qp package.rpm -l
+        rpm -qp package.rpm -l
 * ипортировать публичный ключ цифровой подписи
 
-rpm --import /media/cdrom/RPM-GPG-KEY
+        rpm --import /media/cdrom/RPM-GPG-KEY
 * проверит подпись пакета
 
-rpm --checksig package.rpm
+        rpm --checksig package.rpm
 * проверить целостность установленного содержимого пакета
 
-rpm -qa gpg-pubkey
+        rpm -qa gpg-pubkey
 * проверить размер, полномочия, тип, владельца, группу, MD5-сумму и дату последнего изменеия пакета
 
-rpm -V package_name
+        rpm -V package_name
 * проверить содержимое всех пакеты установленные в систему. Выполняйте с осторожностью!
 
-rpm -Va
+        rpm -Va
 * проверить пакет, который ещё не установлен в систему
 
-rpm -Vp package.rpm
+        rpm -Vp package.rpm
 * извлечь из пакета файлы содержащие в своём имени bin
 
-rpm2cpio package.rpm | cpio --extract --make-directories *bin*
+        rpm2cpio package.rpm | cpio --extract --make-directories *bin*
 * установить пакет, собранный из исходных кодов
 
-rpm -ivh /usr/src/redhat/RPMS/`arch`/package.rpm
+        rpm -ivh /usr/src/redhat/RPMS/`arch`/package.rpm
 * собрать пакет из исходных кодов
 
-rpmbuild --rebuild package_name.src.rpm
+        rpmbuild --rebuild package_name.src.rpm
+
+## YUM — средство обновления пакетов(Fedora, RedHat и тому подобное)
+
+* закачать и установать пакет
+
+        yum install package_name
+* обновить все пакеты, установленные в систему
+
+        yum update
+* обновить пакет
+
+        yum update package_name
+* удалить пакет
+
+        yum remove package_name
+* вывести список всех пакетов, установленных в систему
+
+        yum list
+* найти пакет в репозитории
+
+        yum search package_name
+* очисть rpm-кэш, удалив закачанные пакеты
+
+        yum clean packages
+* удалить все заголовки файлов, которые система использует для разрешения зависимостей
+
+        yum clean headers
+* очисть rpm-кэш, удалив закачанные пакеты и заголовки
+
+        yum clean all
+
+
+## DEB пакеты (Debian, Ubuntu и тому подобное)
+
+* установить / обновить пакет
+
+        dpkg -i package.deb
+* удалить пакет из системы
+
+        dpkg -r package_name
+* показать все пакеты, установленные в систему
+
+        dpkg -l
+* среди всех пакетов, установленных в системе, найти пакет содержащий в своём имени «apache2»
+
+        dpkg -l | | grep apache2
+* отобразить инфрмацию о конкретном пакете
+
+        dpkg -s package_name
+* вывести список файлов, входящих в пакет, установленный в систему
+
+        dpkg -L package_name
+* отобразить список файлов, входящих в пакет, который ешё не установлен в систему
+
+        dpkg --contents package.deb
+* найти пакет, в который входит указанный файл
+
+        dpkg -S /bin/ping
+
+## APT — средство управление пакетами (Debian, Ubuntu и тому подобное)
+
+* установить / обновить пакет
+
+        apt-get install package_name
+* установить / обновить пакет с cdrom'а
+
+        apt-cdrom install package_name
+* получить обновлённые списки пакетов
+
+        apt-get update
+* обновить пакеты, установленные в систему
+
+        apt-get upgrade
+* удалить пакет, установленный в систему с сохранением файлов конфигурации
+
+        apt-get remove package_name
+* удалить пакет, установленный в систему с удалением файлов конфигурации
+
+        apt-get purge package_name
+* проверить целостность зависимостей
+
+        apt-get check
+* удалить загруженные архивные файлы пакетов
+
+        apt-get clean
+* удалить старые загруженные архивные файлы пакетов
+
+        apt-get autoclean
+
+## Pacman — средство управление пакетами (Arch Linux, Chakra, Frugalware и alike)
+
+* установить пакет из репозитория. Если после команды добавить <code>--noconfirm</code>, то не потребуется подтверждать действия.
+
+        pacman -S package_name
+* установить пакет из текущей деиректории
+
+        pacman -U package_name
+* удалить пакет
+
+        pacman -R package_name
+
+* удалить пакет с зависимостями, которые более не требуются
+
+        pacman -Rs package_name
+* найти пакет
+
+        pacman -Ss package_name
+* получить обновленные списки пакетов
+
+        pacman -Sy
+* обновить пакеты
+
+        pacman -Su
+
+# Просмотр содержимого файлов
+
+* вывести содержимое файла file1 на стандартное устройсво вывода
+
+        cat file1
+* вывести содержимое файла file1 на стандартное устройсво вывода в обратном порядке (последняя строка становиться первой и т.д.)
+
+        tac file1
+* постраничный вывод содержимого файла file1 на стандартное устройство вывода
+
+        more file1
+* постраничный вывод содержимого файла file1 на стандартное устройство вывода, но с возможностью пролистывания в обе стороны (вверх-вниз), поиска по содержимому и т.п.
+
+        less file1
+* вывести первые две строки файла file1 на стандартное устройство вывода. По-умолчанию выводится десять строк
+
+        head -2 file1
+* вывести последние две строки файла file1 на стандартное устройство вывода. По-умолчанию выводится десять строк
+
+        tail -2 file1
+* выводить содержимое файла /var/log/messages на стандартное устройство вывода по мере появления в нём текста
+
+        tail -f /var/log/messages
