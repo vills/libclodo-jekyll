@@ -62,3 +62,26 @@
                                                                                       -+            
                                                                                       .`            
                                                                                                     
+pushd Downloads
+tar -xvvf thinksaber-0.4.tar.gz
+pushd thinksaber-0.4
+ls
+python thinksaber.py
+python2.7 thinksaber.py
+cd
+killall -9 -audacious
+ls -l
+killall -9 audacious
+killall -9 mpd
+mpd&
+ncmpc
+ncmpccc
+ncmpcpp
+pushd Lab/libclodo-jekyll
+ls -al
+jekyll --auto
+vim .gitignore
+git commit -a -m "linux commands updated"
+git push
+mc
+su
