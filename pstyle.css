@@ -148,7 +148,7 @@
 	}
 	table.header {
         position: relative;
-        background: url(/images/admin/_default/header.png) no-repeat center;
+        /* background: url(/images/admin/_default/header.png) no-repeat center; */
         z-index: 120;
 		margin-top: -115px;
 		min-width:970px;
