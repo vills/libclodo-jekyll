@@ -2,4 +2,6 @@ _site/*
 .DS_Store
 */.DS_Store
 */*/.DS_Store
+.bash_history
 */.bash_history
+*/*/.bash_history

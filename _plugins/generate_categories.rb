@@ -97,7 +97,11 @@ module Jekyll
       def catname2link(category)
         require "#{self.source}/_catlinks"
         
-        t = category_links.invert.key(category)
+        if Hash.method_defined? :key
+          t = category_links.invert.key(category)
+        else
+          t = category_links.invert.index(category)
+        end
 
         return category if t.nil?
         t
