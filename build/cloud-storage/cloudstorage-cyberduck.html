@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>Cyberduck</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+</head>
+
+<body>
+
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="http://lib.clodo.ru/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				<!--
+					<form action="/search/" method="get" enctype="multipart/form-data"><font style="font-size: 14px;">Поиск по базе знаний</font> <input type="text" size="50" name="search" value=""><input type="submit" id="do" value="Искать" title="Search"></form>
+				-->
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							<div class="category1item"><a href="/clodo">Хостинг Clodo.ru</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/testcategory">Тестовая категория</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/cloud-storage">Облачное хранилище</a></div>
+
+							
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/cloud-storage/backupninja-cloud.html">Создание резервной копии на Cloud Storage</a></div>
+									
+											<div class="category1item"><a href="/cloud-storage/cloudstorage-cyberduck.html">Cyberduck</a></div>
+									
+											<div class="category1item"><a href="/cloud-storage/cloudstorage.html">Облачное хранилище Clodo</a></div>
+									
+											<div class="category1item"><a href="/cloud-storage/subdomain_for_cloudstorage.html">Привязка поддомена к Хранилищу</a></div>
+									
+											<div class="category1item"><a href="/cloud-storage/ftp_to_cs.html">FTP сервер для CloudStorage</a></div>
+									
+								</div>
+							
+						
+							
+							<div class="category1item"><a href="/getting-started">Первые шаги</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/linux">Используем Linux</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/linux-security">Безопасность</a></div>
+
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/cloud-storage">Облачное хранилище</a> :: 
+	Cyberduck
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Подключение к облачному хранилищу с помощью Cyberduck</h1>
+
+<!-- ARTICLE _ START -->
+<p><strong>Cyberduck</strong> - проект с открытым исходным кодом. Он представляет из себя клиент для работы с FTP, SFTP, WebDAV, Cloud Files, Google Docs, и Amazon S3. Клиент работает под Mac OS X и Windows (начиная с версии 4.0). Есть поддержка FTP/TLS, используя AUTH TLS, а также синхронизации каталогов. Работа с Cyberduck ведется через графический интерфейс.</p>
+
+<h2 id="cyberduck----cloud-storage">Использование Cyberduck для работы с Cloud Storage</h2>
+
+<p>Для подключения к <a href="/cloud-storage/cloudstorage.html">Cloud Storage</a> через Cyberduck, необходимо выполнить следующие действия:</p>
+
+<p>Добавить новую закладку, в качестве профиля выбрать <strong>Swift (OpenStack Object Storage)</strong></p>
+
+<p>Заполнить необходимые данные для подключения:</p>
+
+<blockquote>
+  <p>Сервер: api.clodo.ru</p>
+
+  <p>Порт: 443</p>
+
+  <p>Хранилище: storage_xxxxxx_x</p>
+
+  <p>Ключ для доступа: ключ, генерирующийся при создании хранилища. Вы всегда можете сгенерировать его снова, перейдя во вкладку “Cloud Storage” в панели управления.</p>
+</blockquote>
+
+<p><img src="/images/cloudstorage/cyberduck/cyberduck.png" alt="cyberduck" title="cyberduck" /></p>
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | +7 (812) 380-24-97 |  ICQ: 634804320 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>

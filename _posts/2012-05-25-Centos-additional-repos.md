@@ -1,5 +1,5 @@
 ---
-title: "CentOS::репозитории"
+title: "CentOS репозитории"
 description: "Работа с репозиториями CentOS"
 layout: article
 category: Используем Linux
