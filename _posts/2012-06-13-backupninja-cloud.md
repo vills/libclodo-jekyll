@@ -38,8 +38,8 @@ Backupninja-cloud представляет собой плагин для ути
 
 
 	wget http://cs.aylium.net/scripts/backupninja-cloud-debian.sh
-	chmod +x backupninja-clodo-debian.sh
-	./backupninja-clodo-debian.sh
+	chmod +x backupninja-cloud-debian.sh
+	./backupninja-cloud-debian.sh
 
 Создание задания
 ----------
