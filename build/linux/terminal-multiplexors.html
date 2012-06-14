@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>Мультиплексоры терминала</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+</head>
+
+<body>
+
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="http://lib.clodo.ru/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				<!--
+					<form action="/search/" method="get" enctype="multipart/form-data"><font style="font-size: 14px;">Поиск по базе знаний</font> <input type="text" size="50" name="search" value=""><input type="submit" id="do" value="Искать" title="Search"></form>
+				-->
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							<div class="category1item"><a href="/clodo">Хостинг Clodo.ru</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/testcategory">Тестовая категория</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/cloud-storage">Облачное хранилище</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/getting-started">Первые шаги</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/linux">Используем Linux</a></div>
+
+							
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/linux/terminal-multiplexors.html">Мультиплексоры терминала</a></div>
+									
+											<div class="category1item"><a href="/linux/monitoring-utils.html">Утилиты для мониторинга</a></div>
+									
+											<div class="category1item"><a href="/linux/linux-command.html">Команды Linux</a></div>
+									
+											<div class="category1item"><a href="/linux/Centos-additional-repos.html">CentOS репозитории</a></div>
+									
+								</div>
+							
+						
+							
+							<div class="category1item"><a href="/linux-security">Безопасность</a></div>
+
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/linux">Используем Linux</a> :: 
+	Мультиплексоры терминала
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Работа с мультиплексорами терминала</h1>
+
+<!-- ARTICLE _ START -->
+<ul id="markdown-toc">
+  <li><a href="#screen">Screen</a></li>
+</ul>
+
+<h2 id="screen">Screen</h2>
+
+<dl>
+  <dt><em>Описание:</em></dt>
+  <dd>Gnu Sceen - это мощный консольный мультиплексор при работе с одним соединением или одним окном терминала. С возможностью прервать работу (перезагрузка оболочки) и с такой же легкостью восстановить с того места где ее остановили со всеми открытыми окнами.</dd>
+  <dt><em>Установка:</em></dt>
+  <dd>Установить screen можно при помощи стандартного менеджера пакетов.</dd>
+  <dd>
+    <p><em>Debian/Ubuntu:</em></p>
+
+    <pre><code>  aptitude -y install screen
+</code></pre>
+  </dd>
+  <dd>
+    <p><em>CentOS/Fedora:</em> (по-умолчанию утилита уже установлена)</p>
+
+    <pre><code> yum -y install screen
+</code></pre>
+  </dd>
+  <dd><em>Arch Linux:</em>
+
+    <pre><code>  pacman -S screen --noconfirm
+</code></pre>
+  </dd>
+  <dd>
+    <p><em>Gentoo:</em></p>
+
+    <pre><code> emerge screen
+</code></pre>
+  </dd>
+  <dt><em>Использование:</em></dt>
+  <dd>
+    <p>В зависимости от настроек у вас откроется либо приглашение системы, либо экран приветствия (нажав Enter или Space откроется оболочка). После запуска screen’а вы попадаете в режим оболочки, в котором можно работать как с обычной командной строкой.</p>
+  </dd>
+  <dd>
+    <p>Чтобы закрыть текущую оболочку (именно закрыть, а не отсоединиться, т.е. все процессы запущенные в нём так же завершатся!) нужно просто нажать сочетание клавиш ctrl+d.</p>
+  </dd>
+  <dd>
+    <p>Чтобы отсоединиться от текущей сессии (при этом запущенные в нём процессы останутся выполняться) нужно послать сначала комбинацию ctrl+a, а затем букву d (далее подобные комбинации будут обозначаться так: ctrl+a d).</p>
+  </dd>
+  <dd>
+    <p>Для того, чтобы вернуться к отсоединённой сессии достаточно выполнить команду:</p>
+
+    <pre><code>  screen -r
+</code></pre>
+  </dd>
+  <dd>
+    <p>Этот способ сработает, если у вас запущена одна копия screen’а.</p>
+  </dd>
+  <dd>
+    <p>Если же у вас работает несколько screen’ов, то вы получите сообщение об ошибке</p>
+  </dd>
+  <dd>
+    <p>Чтобы подключиться к определённой сессии достаточно выполнить команду “screen -r pid-сессии”:</p>
+
+    <pre><code>  screen -r 25424
+</code></pre>
+  </dd>
+  <dd>
+    <p>Если вы не хотите запоминать столь малоинформативные названия сессий screen’a, то можно задать им названия при запуске</p>
+
+    <pre><code>  screen -S mygameserver
+</code></pre>
+  </dd>
+  <dd>
+    <p>После отсоединения от такого терминала можно будет вернуться к нему, обратившись по его названию:</p>
+
+    <pre><code>  screen -r mygameserver
+</code></pre>
+  </dd>
+  <dd>
+    <p>Если у вас будет запущено несколько терминалов с одинаковым названием, то при обращении к нему придётся указать вначале так же и pid процесса</p>
+
+    <pre><code>  screen -r 26080.mygameserver
+</code></pre>
+  </dd>
+  <dt><em>Горячие клавиши:</em></dt>
+  <dd>
+    <p>Команд, описаных выше, вполне достаточно для работы с утилитой screen. Однако для удобства и более быстрой работы вы можете использовать различные сочетания “горячих клавиш”</p>
+  </dd>
+  <dd>
+    <p>Создать новое окно:</p>
+
+    <pre><code>  Ctrl+a c
+</code></pre>
+  </dd>
+  <dd>
+    <p>Перейти к предыдущему окну</p>
+
+    <pre><code>  Ctrl+a n
+</code></pre>
+  </dd>
+  <dd>
+    <p>Перейти к следущему окну</p>
+
+    <pre><code>  Ctrl+a p
+</code></pre>
+  </dd>
+  <dd>
+    <p>Перейти к окну 1 (можно использовать цифры от 0 до 9)</p>
+
+    <pre><code>  Ctrl+a 1
+</code></pre>
+  </dd>
+  <dd>
+    <p>Вывести список открытых окон</p>
+
+    <pre><code>  Ctrl+a “
+</code></pre>
+  </dd>
+  <dd>
+    <p>Переименовать текущее окно</p>
+
+    <pre><code>  Ctrl+A A
+</code></pre>
+  </dd>
+  <dd>
+    <p>Уничтожить текущее окно</p>
+
+    <pre><code>  Ctrl+a k
+</code></pre>
+  </dd>
+  <dd>
+    <p>Показать информацию о текущем окне</p>
+
+    <pre><code>  Ctrl+a i
+</code></pre>
+  </dd>
+  <dd>
+    <p>Разделить окно на две части</p>
+
+    <pre><code>  Ctrl+a S
+</code></pre>
+  </dd>
+  <dd>
+    <p>Очистить текущее окно</p>
+
+    <pre><code>  Ctrl+a C
+</code></pre>
+  </dd>
+</dl>
+
+<p>Более полный список команд для screen можно поучить, выполнив команду:</p>
+
+<pre><code>    Ctrl+a ?
+</code></pre>
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | +7 (812) 380-24-97 |  ICQ: 634804320 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>
