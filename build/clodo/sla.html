@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>SLA</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+</head>
+
+<body>
+
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="http://lib.clodo.ru/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				<!--
+					<form action="/search/" method="get" enctype="multipart/form-data"><font style="font-size: 14px;">Поиск по базе знаний</font> <input type="text" size="50" name="search" value=""><input type="submit" id="do" value="Искать" title="Search"></form>
+				-->
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							<div class="category1item"><a href="/clodo">Хостинг Clodo.ru</a></div>
+
+							
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/clodo/sla.html">SLA</a></div>
+									
+								</div>
+							
+						
+							
+							<div class="category1item"><a href="/testcategory">Тестовая категория</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/cloud-storage">Облачное хранилище</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/getting-started">Первые шаги</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/linux">Используем Linux</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/linux-security">Безопасность</a></div>
+
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/clodo">Хостинг Clodo.ru</a> :: 
+	SLA
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Соглашение об уровне предоставляемого сервиса (SLA)</h1>
+
+<!-- ARTICLE _ START -->
+<ul id="markdown-toc">
+  <li><a href="#network">Сеть</a></li>
+  <li><a href="#hardware">Оборудование</a></li>
+  <li><a href="#techwork">Технические работы</a></li>
+  <li><a href="#compens">Компенсация</a></li>
+</ul>
+
+<h2 id="network">Сеть</h2>
+
+<p>Мы гарантируем доступность сетевых соединений на уровне 99,9% времени в год, за исключением планового технического обслуживания.</p>
+
+<h2 id="hardware">Оборудование</h2>
+
+<p>Мы гарантируем бесперебойное функционирование всех элементов вычислительного кластера, системы хранения данных, и сетевого оборудования. Если оборудование выходит из строя, мы гарантируем, что восстановление или ремонт будет завершен в течение одного часа после обнаружения проблемы.</p>
+
+<h2 id="techwork">Технические работы</h2>
+
+<p>Для проведения технических работ возможно осуществление перезагрузки или миграции виртуального сервера. Во время проведения перезагрузки или миграции возможно кратковременное ограничение доступности виртуального сервера.</p>
+
+<p>В случае, если для осуществления плановых работ будет производиться перезагрузка или миграция виртуального сервера, мы сообщим вам об этом минимум за 24 часа до начала миграции. Сообщение о проведении работ размещается на официальном форуме и, в частных случаях, отправляется на адрес электронной почты указанный при регистрации.</p>
+
+<p>Мы оставляем за собой право без предупреждения выполнять миграцию или перезагрузку виртуального сервера в аварийных ситуациях и при необходимости обеспечения бесперебойной работы ресурсов клиента.</p>
+
+<p>Мы гарантируем, что перерыв в работе виртуального сервера вызванный неисправностью узлов кластера, не превысит 45 (сорок пять) минут в месяц.</p>
+
+<h2 id="compens">Компенсация</h2>
+
+<p>Если перерыв в работе виртуального сервера, указанный выше, превышен, вы имеете право на получение компенсации. Размер компенсации за каждые 30 минут непрерывного простоя сверх указанной нормы, определяется в индивидуальном порядке на договорной основе.</p>
+
+<p>Вы не имеете права на получение компенсации, если:</p>
+
+<p>Недоступность виртуального сервера вызвана отключением за нарушение Договора оферты и приложений к нему (включая обязательства по оплате).
+Недоступные ресурсы используются в режиме тестирования или оплачены бонусными средствами.
+Недоступность виртуального сервера вызвана использованием тестовой панели управления ресурсами.
+Чтобы получить компенсацию, вы должны обратиться с запросом по адресу bill@clodo.ru в течение тридцати (30) дней после инцидента. В запросе необходимо указать идентификационный номер (ID) ресурса или ресурсов, простой которых является причиной рекламации.</p>
+
+<p>Компенсация выплачивается путем зачисления на ваш лицевой счет бонуса, эквивалентного размеру компенсации.</p>
+
+<p>Данное соглашение является частью Договора оферты.</p>
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | +7 (812) 380-24-97 |  ICQ: 634804320 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>CentOS репозитории</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+</head>
+
+<body>
+
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="http://lib.clodo.ru/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				<!--
+					<form action="/search/" method="get" enctype="multipart/form-data"><font style="font-size: 14px;">Поиск по базе знаний</font> <input type="text" size="50" name="search" value=""><input type="submit" id="do" value="Искать" title="Search"></form>
+				-->
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							<div class="category1item"><a href="/clodo">Хостинг Clodo.ru</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/testcategory">Тестовая категория</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/cloud-storage">Облачное хранилище</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/getting-started">Первые шаги</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/linux">Используем Linux</a></div>
+
+							
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/linux/terminal-multiplexors.html">Мультиплексоры терминала</a></div>
+									
+											<div class="category1item"><a href="/linux/monitoring-utils.html">Утилиты для мониторинга</a></div>
+									
+											<div class="category1item"><a href="/linux/linux-command.html">Команды Linux</a></div>
+									
+											<div class="category1item"><a href="/linux/Centos-additional-repos.html">CentOS репозитории</a></div>
+									
+								</div>
+							
+						
+							
+							<div class="category1item"><a href="/linux-security">Безопасность</a></div>
+
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/linux">Используем Linux</a> :: 
+	CentOS репозитории
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Работа с репозиториями CentOS</h1>
+
+<!-- ARTICLE _ START -->
+<ul id="markdown-toc">
+  <li><a href="#centos">Дополнительные репозитории, предоставляемые CentOS</a></li>
+  <li><a href="#section">Сторонние репозитории</a></li>
+</ul>
+
+<p>Есть несколько репозиториев, предоставляемые CentOS и сторонними разработчиками, которые содержат программные пакеты, не включенные в список базовых или обновлений. Эти хранилища имеют различные уровни стабильности, поддержки и сотрудничества в рамках сообщества CentOS.</p>
+
+<h2 id="centos">Дополнительные репозитории, предоставляемые CentOS</h2>
+
+<p>CentOS Extras - этот репозиторий включает в себя набор ПО, которое обеспечивают дополнительную функциональность CentOS без нарушения совместимости при обновлении базовых компонентов. Группа разработчиков CentOS тестирует каждый пакет в этом репозитории, и все они работают с CentOS. Этот репозиторий включен в CentOS по умолчанию.</p>
+
+<p>CentOS Plus - содержит пакеты, которые обновят базовый набор ПО. Этот репозиторий изменит общий вид CentOS таким образом, что она не будет соответствовать ОС, выпущенной компанией Red Hat. Команда разработчиков CentOS тестирует каждый пакет в этом репозитории, поэтому все они будут работать в CentOS. Компания Red Hat не тестирует данное ПО, и не предоставляет его в своих продуктах. Этот репозиторий поставляется вместе с CentOS, но по умолчанию не активирован. Включает в себя такие пакеты, как postfix (с поддержкой БД), пересобранные ядра с поддержкой дополнительных файловых систем, php5 и mysql5.</p>
+
+<p>CS/GFS - репозиторий с пересобранными пакетами Cluster Suite и Global File System для CentOS-4, поддерживающий архитектуры x86 и x86_64. Команда разработчиков CentOS тестирует каждый пакет в этом репозитории, поэтому все они будут работать в CentOS. Данный репозиторий не поставляется по умолчанию с CentOS, но он может быть добавлен при помощи файла, доступного по ссылке:<a href="">http://mirror.centos.org/centos-4/4/csgfs/CentOS-csgfs.repo</a></p>
+
+<p>CentOS Testing - служит временным хранилищем для пакетов ПО, которые попадут в список CentOS Plus и CentOS Extras. Ими можно заменять базовые компоненты CentOS, но работа не гарантируется. Они доступны для установки, и ожидают отзывов от тестирующих насчет функциональности и стабильности. Пакеты, доступные в этом репозитории, будут добавляться и исключаться, поэтому активировать этот репозиторий на рабочих серверах не рекомендуется. Файл конфигурации репозитория доступен по адресу:<a href="">http://dev.centos.org/centos/5/CentOS-Testing.repo</a></p>
+
+<p>CentOS-Fasttrack - репозиторий, содержащий в себе исправление ошибок и дополнительные обновления, появляющиеся время от времени, ожидающие следующего релиза. Fasttrack доступен для CentOS 5 по данной ссылке:<a href="">http://mirror.centos.org/centos/5/fasttrack/CentOS-Fasttrack.repo</a></p>
+
+<p>Contrib - репозиторий содержит пакеты, созданные пользователями. Данное ПО никак не пересекается с какими-либо пакетами, входящими с втандартную комплектацию операционной системы. Они не тестируются разработчиками и могут не соответствовать актуальным версиям ОС.</p>
+
+<h2 id="section">Сторонние репозитории</h2>
+
+<p>RPMForge - репозиторий принадлежит одному из разработчиков CentOS. Данный репозиторий содержит в себе около 10000 пакетов, среди которых есть MPlayer, XMMS-mp3, и других распространенных пакетов, для работы с мультимедийными файлами. Более подробную информацию можно получить на его сайте:<a href="">http://dag.wieers.com/rpm/</a></p>
+
+<p>KBS-Extras - еще один репозиторий от разработчика CentOS. Содержит в себе пакеты от Fedora Extras, пропатченные для работы в CentOS. Доступен по адресу <a href="">http://centos.karan.org/</a>. Он также получил репутацию стабильного и безопасного источника ПО.</p>
+
+<p>EPEL (Extra Packages for Enterprise Linux) - содержит пересобранные пакеты из репозиториев для EL4 и EL5 для Fedora Linux. Установите соответствующий epel-release пакет для настройки EL5 или EL6. При использовании данного репозитория стоит обратить внимение на то, что он не может заменить пакеты, установленные из CentOS-Extras, активированного с системе по умолчанию. Во избежание подобного, рекомендуется использовать плагин Priority для Yum. Особенно, если вы используете ПО из иных сторонних репозиториев.</p>
+
+<p>RPMfusion Repository - включает в себя пакеты, которые не предоствляются Red Hat или Fedora. Для EL5 находятся в тестовой стадии. Для более подробной информации смотрите <a href="">http://rpmfusion.org/</a></p>
+
+<p>Les RPM de Remi repository - содержит бэкпорты Mysql и PHP, собранные из rpm-пкетов для Fedora. В ходе обновления могут быть заменены пакеты из основной ветки.</p>
+
+<p>The Community Enterprise Linux Repository (EPEL) - community-репозиторий, сфокусированный на приложениях для мониторинга, работы сетью, звуком, и драйверами. Делится на 4 ветки.</p>
+
+<ul>
+  <li>
+    <p><strong>elrepo</strong> - стандартная ветка. Добавляется следующей командой:</p>
+
+    <pre><code>  yum --enablerepo=elrepo
+</code></pre>
+  </li>
+  <li>
+    <p><strong>elrepo-testing</strong> - содержит пакеты. который должны войти в страндартную ветку. По-умолчанию не активированы. Можно активировать, выполнив команду:</p>
+
+    <pre><code>  yum --enablerepo=elrepo-testing
+</code></pre>
+  </li>
+  <li>
+    <p><strong>elrepo-kernel</strong> - содержит последние стабильные версии ядер, сконфигурированных для EL5. По умолчанию не активированы. Именование ядер изменено на kernel-ml, чтобы не конфликтовать с ядрами CentOS/EL5, поэтому их можно устанавливать и обновлять одновременно со стандартными ядрами. Активировать репозиторий можно, выполнив команду:</p>
+
+    <pre><code>  yum --enablerepo=elrepo-kernel
+</code></pre>
+  </li>
+  <li>
+    <p><strong>elrepo-extras</strong> - содержит обновленные пакеты для CentOS (или любой другой совместимой ОС). По умолчанию не активирован, т.к. могут заменять пакеты самого дистрибутива. Активируется командой:</p>
+
+    <pre><code>  yum --enablerepo=elrepo-extras
+</code></pre>
+  </li>
+</ul>
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | +7 (812) 380-24-97 |  ICQ: 634804320 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>
