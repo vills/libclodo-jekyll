@@ -382,8 +382,8 @@
 		padding: 0px;
 	}
 	.innertube pre {
-		background: #122312;
-		color: #fff;
+		background: #dddddd;
+		color: #000;
 		padding: 15px 20px;
 		font-family: "Courier New", monospace;
 		font-size: 14px;

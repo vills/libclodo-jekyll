@@ -1,0 +1,59 @@
+---
+layout: article
+title: "Создание резервной копии на Cloud Storage"
+category: Облачное хранилище 
+---
+
+## Создание резервной копии на Cloud Storage
+
+Для создания резераной копии на облачное хранилище, можно использовать утилиту Backupninja и плагины, позволяющие загружать данные в хранилище.
+
+Backupninja-cloud представляет собой плагин для утилиты Backupninja.
+При помощи него можно создавать резервные копии и загружать их на Clodo Cloud Storage
+
+Для того, чтобы это сделать, необходимо сперва установить следующее ПО:
+
+backupninja - утилита для управления создания резервных копий
+duplicity - утилита для создание инкрементированных резервных копий
+python-cloudfiles - библиотека для поддержки облачных хранилищ
+backupninja-cloud - плагин для работы с облачным хранилищем
+
+Для установки на Debian 6 можно воспользоваться скриптом для автоматической установки:
+
+
+	wget http://cs.aylium.net/scripts/backupninja-clodo-debian.sh
+	chmod +x backupninja-clodo-debian.sh
+	./backupninja-clodo-debian.sh
+
+
+После успешной установки, можно приступить к настройке резервной копии файлов. Она производится при помощи ninjahelper:
+
+    ninjahelper
+	
+![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_001.png)
+
+
+Создание нового задания для резервного копирования начинается с выбора типа резервного копирования. В данном случае - csdup.
+
+![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_002.png)
+
+
+В главном меню создания задания необходимо пошагово указать все необходимые данные.
+![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_003.png)
+
+src:
+
+Здесь необходимо указать директории, которые будут загружены в хранилище
+
+![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_004.png)
+
+Exclude позволяет указать файлы, которые не будут включены в резервную копию
+
+![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_005.png)
+
+dest:
+
+
+На данном этапе указываются все данные назначения резервной копии:
+
+![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_006.png)

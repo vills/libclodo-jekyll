@@ -1,5 +1,5 @@
 ---
-title: "Терминал::команды"
+title: "Команды Linux"
 description: "Команды Linux: расширенный cправочник команд Unix"
 layout: article
 category: Используем Linux
