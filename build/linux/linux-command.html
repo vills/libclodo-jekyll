@@ -1,0 +1,2328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>Команды Linux</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+</head>
+
+<body>
+
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="http://lib.clodo.ru/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				<!--
+					<form action="/search/" method="get" enctype="multipart/form-data"><font style="font-size: 14px;">Поиск по базе знаний</font> <input type="text" size="50" name="search" value=""><input type="submit" id="do" value="Искать" title="Search"></form>
+				-->
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							<div class="category1item"><a href="/clodo">Хостинг Clodo.ru</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/testcategory">Тестовая категория</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/cloud-storage">Облачное хранилище</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/getting-started">Первые шаги</a></div>
+
+							
+						
+							
+							<div class="category1item"><a href="/linux">Используем Linux</a></div>
+
+							
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/linux/terminal-multiplexors.html">Мультиплексоры терминала</a></div>
+									
+											<div class="category1item"><a href="/linux/monitoring-utils.html">Утилиты для мониторинга</a></div>
+									
+											<div class="category1item"><a href="/linux/linux-command.html">Команды Linux</a></div>
+									
+											<div class="category1item"><a href="/linux/Centos-additional-repos.html">CentOS репозитории</a></div>
+									
+								</div>
+							
+						
+							
+							<div class="category1item"><a href="/linux-security">Безопасность</a></div>
+
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/linux">Используем Linux</a> :: 
+	Команды Linux
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Команды Linux: расширенный cправочник команд Unix</h1>
+
+<!-- ARTICLE _ START -->
+<p>Большинство UNIX-like систем обладают встроенной справкой, которая подробно описывает все доступные команды. Однако чтобы воспользоваться этой справкой, вы должны знать, по крайней мере, название команды, о которой вы хотите получить информацию. Поскольку большинство пользователей только в общих чертах понимают, что они хотят сделать, то, как правило, встроенная справка мало полезна новичкам.</p>
+
+<p>Этот справочник поможет пользователям, знающим, что они хотят сделать, найти соответствующую команду Linux по краткому описанию.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#section">Системная информация</a></li>
+  <li><a href="#section-1">Остановка системы</a></li>
+  <li><a href="#section-2">Файлы и директории</a></li>
+  <li><a href="#section-3">Поиск файлов</a></li>
+  <li><a href="#section-4">Монтирование файловых систем</a></li>
+  <li><a href="#section-5">Дисковое пространство</a></li>
+  <li><a href="#section-6">Пользователи и группы</a></li>
+  <li><a href="#section-7">Выставление/изменение полномочий на файлы</a></li>
+  <li><a href="#section-8">Специальные атрибуты файлов</a></li>
+  <li><a href="#section-9">Архивирование и сжатие файлов</a></li>
+  <li><a href="#rpm--fedora-red-hat---">RPM пакеты (Fedora, Red Hat и тому подобное)</a></li>
+  <li><a href="#yum----fedora-redhat---">YUM — средство обновления пакетов(Fedora, RedHat и тому подобное)</a></li>
+  <li><a href="#deb--debian-ubuntu---">DEB пакеты (Debian, Ubuntu и тому подобное)</a></li>
+  <li><a href="#apt-----debian-ubuntu---">APT — средство управление пакетами (Debian, Ubuntu и тому подобное)</a></li>
+  <li><a href="#pacman-----arch-linux-chakra-frugalware--alike">Pacman — средство управление пакетами (Arch Linux, Chakra, Frugalware и alike)</a></li>
+  <li><a href="#section-10">Просмотр содержимого файлов</a></li>
+  <li><a href="#section-11">Манипуляции с текстом</a></li>
+  <li><a href="#section-12">Преобразование наборов символов и файловых форматов</a></li>
+  <li><a href="#section-13">Анализ файловых систем</a></li>
+  <li><a href="#section-14">Форматирование файловых систем</a></li>
+  <li><a href="#swap-">swap-пространство</a></li>
+  <li><a href="#backup">Создание резервных копий (backup)</a></li>
+  <li><a href="#section-15">Сеть</a></li>
+  <li><a href="#microsoft-windows-networkssamba">Microsoft Windows networks(SAMBA)</a></li>
+  <li><a href="#iptables-firewall">IPTABLES (firewall)</a></li>
+  <li><a href="#section-16">Мониторинг и отладка</a></li>
+  <li><a href="#section-17">Другие полезные команды</a></li>
+</ul>
+
+<h2 id="section">Системная информация</h2>
+
+<ul>
+  <li>
+    <p>отобразить архитектуру компьютера:</p>
+
+    <pre><code>  arch
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить используемую версию ядра</p>
+
+    <pre><code>  uname -r
+</code></pre>
+  </li>
+  <li>
+    <p>показать аппаратные системные компоненты — (SMBIOS / DMI)</p>
+
+    <pre><code>  dmidecode -q
+</code></pre>
+  </li>
+  <li>
+    <p>вывести характеристики жесткого диска</p>
+
+    <pre><code>  hdparm -i /dev/hda
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить информацию о процессоре</p>
+
+    <pre><code>  cat /proc/cpuinfo
+</code></pre>
+  </li>
+  <li>
+    <p>показать прерывания</p>
+
+    <pre><code>  cat /proc/interrupts
+</code></pre>
+  </li>
+  <li>
+    <p>проверить использование памяти</p>
+
+    <pre><code>  cat /proc/meminfo
+</code></pre>
+  </li>
+  <li>
+    <p>показать файл(ы) подкачки</p>
+
+    <pre><code>  cat /proc/swaps
+</code></pre>
+  </li>
+  <li>
+    <p>вывести версию ядра</p>
+
+    <pre><code>  cat /proc/version
+</code></pre>
+  </li>
+  <li>
+    <p>показать сетевые интерфейсы и статистику по ним</p>
+
+    <pre><code>  cat /proc/net/dev
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить смонтированные файловые системы</p>
+
+    <pre><code>  cat /proc/mounts
+</code></pre>
+  </li>
+  <li>
+    <p>показать в виде дерева PCI устройства</p>
+
+    <pre><code>  lspci -tv
+</code></pre>
+  </li>
+  <li>
+    <p>показать в виде дерева USB устройства</p>
+
+    <pre><code>  lsusb -tv
+</code></pre>
+  </li>
+  <li>
+    <p>вывести системную дату</p>
+
+    <pre><code>  date
+</code></pre>
+  </li>
+  <li>
+    <p>вывести таблицу-календарь 2011-го года</p>
+
+    <pre><code>  cal 2007
+</code></pre>
+  </li>
+  <li>
+    <p>установить системные дату и время ММДДЧЧммГГГГ.СС </p>
+
+    <pre><code>  date 041217002007.00*
+</code></pre>
+  </li>
+  <li>
+    <p>сохранить системное время в BIOS</p>
+
+    <pre><code>  clock -w
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-1">Остановка системы</h2>
+
+<ul>
+  <li>
+    <p>остановить систему</p>
+
+    <pre><code>  shutdown -h
+</code></pre>
+  </li>
+  <li>
+    <p>запланировать остановку системы на указанное время</p>
+
+    <pre><code>  shutdown -h hours:minutes &amp;
+</code></pre>
+  </li>
+  <li>
+    <p>отменить запланированную по расписанию остановку системы</p>
+
+    <pre><code>  shutdown -c
+</code></pre>
+  </li>
+  <li>
+    <p>перезагрузить систему</p>
+
+    <pre><code>  shutdown -r
+</code></pre>
+  </li>
+  <li>
+    <p>выйти из системы</p>
+
+    <pre><code>  logout
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-2">Файлы и директории</h2>
+
+<ul>
+  <li>
+    <p>перейти в директорию ‘/home’</p>
+
+    <pre><code>  cd /home
+</code></pre>
+  </li>
+  <li>
+    <p>перейти в директорию уровнем выше</p>
+
+    <pre><code>  cd ..
+</code></pre>
+  </li>
+  <li>
+    <p>перейти в директорию двумя уровнями выше</p>
+
+    <pre><code>  cd ../..
+</code></pre>
+  </li>
+  <li>
+    <p>перейти в домашнюю директорию</p>
+
+    <pre><code>  cd
+</code></pre>
+  </li>
+  <li>
+    <p>перейти в домашнюю директорию пользователя user</p>
+
+    <pre><code>  cd ~user
+</code></pre>
+  </li>
+  <li>
+    <p>перейти в директорию, в которой находились до перехода в текущую директорию</p>
+
+    <pre><code>  cd -
+</code></pre>
+  </li>
+  <li>
+    <p>показать текущюю директорию</p>
+
+    <pre><code>  pwd
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить содержимое текущей директории</p>
+
+    <pre><code>  ls
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить содержимое текущей директории с добавлением к именам символов, храктеризующих тип</p>
+
+    <pre><code>  ls -F
+</code></pre>
+  </li>
+  <li>
+    <p>показать детализированое представление файлов и директорий в текущей директории</p>
+
+    <pre><code>  ls -l
+</code></pre>
+  </li>
+  <li>
+    <p>показать скрытые файлы и директории в текущей директории</p>
+
+    <pre><code>  ls -a
+</code></pre>
+  </li>
+  <li>
+    <p>показать файлы и директории содержащие в имени цифры</p>
+
+    <pre><code>  ls *[0-9]*
+</code></pre>
+  </li>
+  <li>
+    <p>показать дерево файлов и директорий, начиная от корня (/)</p>
+
+    <pre><code>  tree
+</code></pre>
+  </li>
+  <li>
+    <p>создать директорию с именем ‘dir1’</p>
+
+    <pre><code>  mkdir dir1
+</code></pre>
+  </li>
+  <li>
+    <p>создать две директории одновременно</p>
+
+    <pre><code>  mkdir dir1 dir2
+</code></pre>
+  </li>
+  <li>
+    <p>создать дерево директорий</p>
+
+    <pre><code>  mkdir -p /tmp/dir1/dir2
+</code></pre>
+  </li>
+  <li>
+    <p>удалить файл с именем ‘file1’</p>
+
+    <pre><code>  rm -f file1
+</code></pre>
+  </li>
+  <li>
+    <p>удалить директорию с именем ‘dir1’</p>
+
+    <pre><code>  rmdir dir1
+</code></pre>
+  </li>
+  <li>
+    <p>удалить директорию с именем ‘dir1’ и рекурсивно всё её содержимое</p>
+
+    <pre><code>  rm -rf dir1
+</code></pre>
+  </li>
+  <li>
+    <p>удалить две директории и рекурсивно их содержимое</p>
+
+    <pre><code>  rm -rf dir1 dir2
+</code></pre>
+  </li>
+  <li>
+    <p>переименовать или переместить файл или директорию</p>
+
+    <pre><code>  mv dir1 new_dir
+</code></pre>
+  </li>
+  <li>
+    <p>скопировать файл file1 в файл file2</p>
+
+    <pre><code>  cp file1 file2
+</code></pre>
+  </li>
+  <li>
+    <p>копировать все файлы директории dir в текущую директорию</p>
+
+    <pre><code>  cp dir/* .
+</code></pre>
+  </li>
+  <li>
+    <p>копировать директорию dir1 со всем содержимым в текущую директорию</p>
+
+    <pre><code>  cp -a /tmp/dir1 .
+</code></pre>
+  </li>
+  <li>
+    <p>копировать директорию dir1 в директорию dir2</p>
+
+    <pre><code>  cp -a dir1 dir2
+</code></pre>
+  </li>
+  <li>
+    <p>создать символическую ссылку на файл или директорию</p>
+
+    <pre><code>  ln -s file1 lnk1*
+</code></pre>
+  </li>
+  <li>
+    <p>создать «жёсткую» (физическую) ссылку на файл или директорию</p>
+
+    <pre><code>  ln file1 lnk1
+</code></pre>
+  </li>
+  <li>
+    <p>модифицировать дату и время создания файла, при его отсутствии, создать файл с указанными датой и временем (YYMMDDhhmm)</p>
+
+    <pre><code>  touch -t 0712250000 fileditest
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-3">Поиск файлов</h2>
+
+<ul>
+  <li>
+    <p>найти файлы и директории с именем file1. Поиск начать с корня (/)</p>
+
+    <pre><code>  find / -name file1
+</code></pre>
+  </li>
+  <li>
+    <p>найти файл и директорию принадлежащие пользователю user1. Поиск начать с корня (/)</p>
+
+    <pre><code>  find / -user user1
+</code></pre>
+  </li>
+  <li>
+    <p>найти все файлы и директории, имена которых оканчиваются на ‘. bin’. Поиск начать с ‘/ home/user1’*</p>
+
+    <pre><code>  find /home/user1 -name "*.bin"
+</code></pre>
+  </li>
+  <li>
+    <p>найти все файлы в ‘/usr/bin’, время последнего обращения к которым более 100 дней</p>
+
+    <pre><code>  find /usr/bin -type f -atime +100
+</code></pre>
+  </li>
+  <li>
+    <p>найти все файлы в ‘/usr/bin’, созданные или изменённые в течении последних 10 дней</p>
+
+    <pre><code>  find /usr/bin -type f -mtime -10
+</code></pre>
+  </li>
+  <li>
+    <p>найти все файлы и директории, имена которых оканчиваются на ‘.rpm’, и изменить права доступа к ним</p>
+
+    <pre><code>  find / -name *.rpm -exec chmod 755 '{}' \;
+</code></pre>
+  </li>
+  <li>
+    <p>найти все файлы и директории, имена которых оканчиваются на ‘.rpm’, игнорируя съёмные носители, такие как cdrom, floppy и т.п.</p>
+
+    <pre><code>  find / -xdev -name "*.rpm"
+</code></pre>
+  </li>
+  <li>
+    <p>найти все файлы, сожержащие в имени ‘.ps’. Предварительно рекомендуется выполнить команду ‘updatedb’</p>
+
+    <pre><code>  locate "*.ps"
+</code></pre>
+  </li>
+  <li>
+    <p>показывает размещение бинарных файлов, исходных кодов и руководств, относящихся к файлу ‘halt’</p>
+
+    <pre><code>  whereis halt
+</code></pre>
+  </li>
+  <li>
+    <p>отображает полный путь к файлу ‘halt’</p>
+
+    <pre><code>  which halt
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-4">Монтирование файловых систем</h2>
+
+<ul>
+  <li>
+    <p>монтирует раздел ‘hda2’ в точку монтирования ‘/mnt/hda2’. Убедитесь в наличии директории-точки монтирования ‘/mnt/hda2’</p>
+
+    <pre><code>  mount /dev/hda2 /mnt/hda2
+</code></pre>
+  </li>
+  <li>
+    <p>размонтирует раздел ‘hda2’. Перед выполнением, покиньте ‘/mnt/hda2’</p>
+
+    <pre><code>  umount /dev/hda2
+</code></pre>
+  </li>
+  <li>
+    <p>принудительное размонтирование раздела. Применяется в случае, когда раздел занят каким-либо пользователем</p>
+
+    <pre><code>  fuser -km /mnt/hda2
+</code></pre>
+  </li>
+  <li>
+    <p>выполнить размонитрование без занесения информации в /etc/mtab. Полезно когда файл имеет атрибуты «только чтение» или недостаточно места на диске</p>
+
+    <pre><code>  umount -n /mnt/hda2
+</code></pre>
+  </li>
+  <li>
+    <p>монтировать флоппи-диск</p>
+
+    <pre><code>  mount /dev/fd0 /mnt/floppy
+</code></pre>
+  </li>
+  <li>
+    <p>монтировать CD или DVD</p>
+
+    <pre><code>  mount /dev/cdrom /mnt/cdrom
+</code></pre>
+  </li>
+  <li>
+    <p>монтировать CD-R/CD-RW или DVD-R/DVD-RW(+-)</p>
+
+    <pre><code>  mount /dev/hdc /mnt/cdrecorder
+</code></pre>
+  </li>
+  <li>
+    <p>смонтировать ISO-образ</p>
+
+    <pre><code>  mount -o loop file.iso /mnt/cdrom
+</code></pre>
+  </li>
+  <li>
+    <p>монтировать файловую систему Windows FAT32</p>
+
+    <pre><code>  mount -t vfat /dev/hda5 /mnt/hda5
+</code></pre>
+  </li>
+  <li>
+    <p>монтировать сетевую файловую систему Windows (SMB/CIFS)</p>
+
+    <pre><code>  mount -t smbfs -o username=user,password=pass //winclient/share /mnt/share
+</code></pre>
+  </li>
+  <li>
+    <p>«монтирует» директорию в директорию (binding). Доступна с версии ядра 2.4.0. Полезна, например, для предоставления содержимого пользовательской директории через ftp при работ
+е ftp-сервера в «песочнице» (chroot), когда симлинки сделать невозможно. Выполнение данной команды сделает копию содержимого /home/user/prg в /var/ftp/user</p>
+
+    <pre><code>  mount -o bind /home/user/prg /var/ftp/user
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-5">Дисковое пространство</h2>
+
+<ul>
+  <li>
+    <p>информация о смонтированных разделах с отображением общего, доступного и используемого пространства (Прим.переводчика. ключ -h работает не во всех *nix системах)</p>
+
+    <pre><code>  df -h
+</code></pre>
+  </li>
+  <li>
+    <p>вывести список файлов и директорий рекурсивно с сортировкой по возрастанию размера и осуществлять постраничный просмотр</p>
+
+    <pre><code>  ls -lSr |more
+</code></pre>
+  </li>
+  <li>
+    <p>вывести размер, занимаемый директорией ‘dir1’ (Прим.переводчика. ключ -h работает не во всех *nix системах)</p>
+
+    <pre><code>  du -sh dir1
+</code></pre>
+  </li>
+  <li>
+    <p>размер и имена файлов и директорий, с соритровкой по размеру</p>
+
+    <pre><code>  du -sk * | sort -rn
+</code></pre>
+  </li>
+  <li>
+    <p>размер используемого дискового пространства, занимаемое файлами rpm-пакета, с сортировкой по размеру (fedora, redhat и т.п.)</p>
+
+    <pre><code>  rpm -q -a --qf '%10t%n' | sort -k1,1n
+</code></pre>
+  </li>
+  <li>
+    <p>размер используемого дискового пространства, занимаемое файлами deb-пакета, с сортировкой по размеру (ubuntu, debian т.п.)</p>
+
+    <pre><code>  dpkg-query -W -f='${Installed-Size;10}t$n' | sort -k1,1n
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-6">Пользователи и группы</h2>
+
+<ul>
+  <li>
+    <p>создать новую группу с именем group_name</p>
+
+    <pre><code>  groupadd group_name
+</code></pre>
+  </li>
+  <li>
+    <p>удалить группу group_name</p>
+
+    <pre><code>  groupdel group_name
+</code></pre>
+  </li>
+  <li>
+    <p>переименовать группу old_group_name в new_group_name</p>
+
+    <pre><code>  groupmod -n new_group_name old_group_name
+</code></pre>
+  </li>
+  <li>
+    <p>создать пользователя user1, назначить ему в качестве домашнего каталога /home/user1, в качестве shell’а /bin/bash, включить его в группу admin и добавить комментарий Nome Cognome</p>
+
+    <pre><code>  useradd -c "Nome Cognome" -g admin -d /home/user1 -s /bin/bash user1
+</code></pre>
+  </li>
+  <li>
+    <p>создать пользователя user1</p>
+
+    <pre><code>  useradd user1
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пользователя user1 и его домашний каталог</p>
+
+    <pre><code>  userdel -r user1
+</code></pre>
+  </li>
+  <li>
+    <p>изменить атрибуты пользователя</p>
+
+    <pre><code>  usermod -c "User FTP" -g system -d /ftp/user1 -s /bin/nologin user1
+</code></pre>
+  </li>
+  <li>
+    <p>сменить пароль</p>
+
+    <pre><code>  passwd
+</code></pre>
+  </li>
+  <li>
+    <p>сменить пароль пользователя user1 (только root)</p>
+
+    <pre><code>  passwd user1
+</code></pre>
+  </li>
+  <li>
+    <p>установить дату окончания действия учётной записи пользователя user1</p>
+
+    <pre><code>  chage -E 2005-12-31 user1
+</code></pre>
+  </li>
+  <li>
+    <p>проверить корректность системных файлов учётных записей. Проверяются файлы /etc/passwd и /etc/shadow</p>
+
+    <pre><code>  pwck
+</code></pre>
+  </li>
+  <li>
+    <p>проверить корректность системных файлов учётных записей. Проверяется файл/etc/group</p>
+
+    <pre><code>  grpck
+</code></pre>
+  </li>
+  <li>
+    <p>изменить первичную группу текущего пользователя. Если указать «-», ситуация будет идентичной той, в которой пользователь вышил из системы и снова вошёл. Если не указывать группу, первичная группа будет назначена из /etc/passwd</p>
+
+    <pre><code>  newgrp [-] group_name
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-7">Выставление/изменение полномочий на файлы</h2>
+
+<ul>
+  <li>
+    <p>просмотр полномочий на файлы и директории в текущей директории</p>
+
+    <pre><code>  ls -lh
+</code></pre>
+  </li>
+  <li>
+    <p>вывести содержимое директории /tmp и разделить вывод на пять колонок</p>
+
+    <pre><code>  ls /tmp | pr -T5 -W$COLUMNS
+</code></pre>
+  </li>
+  <li>
+    <p>добавить полномочия на директорию directory1 ugo(User Group Other)+rwx(Read Write eXecute) — всем полные права. Аналогичное можно сделать таким образом chmod 777 directory1</p>
+
+    <pre><code>  chmod ugo+rwx directory1
+</code></pre>
+  </li>
+  <li>
+    <p>отобрать у группы и всех остальных все полномочия на директорию directory1</p>
+
+    <pre><code>  chmod go-rwx directory1
+</code></pre>
+  </li>
+  <li>
+    <p>назначить владельцем файла file1 пользователя user1</p>
+
+    <pre><code>  chown user1 file1
+</code></pre>
+  </li>
+  <li>
+    <p>назначить рекурсивно владельцем директории directory1 пользователя user1</p>
+
+    <pre><code>  chown -R user1 directory1
+</code></pre>
+  </li>
+  <li>
+    <p>сменить группу-владельца файла file1 на group1</p>
+
+    <pre><code>  chgrp group1 file1
+</code></pre>
+  </li>
+  <li>
+    <p>сменить владельца и группу владельца файла file1</p>
+
+    <pre><code>  chown user1:group1 file1
+</code></pre>
+  </li>
+  <li>
+    <p>найти, начиная от корня, все файлы с выставленным SUID</p>
+
+    <pre><code>  find / -perm -u+s
+</code></pre>
+  </li>
+  <li>
+    <p>назначить SUID-бит файлу /bin/binary_file. Это даёт возможность любому пользователю запускать на выполнение файл с полномочиями владельца файла</p>
+
+    <pre><code>  chmod u+s /bin/binary_file
+</code></pre>
+  </li>
+  <li>
+    <p>снять SUID-бит с файла /bin/binary_file</p>
+
+    <pre><code>  chmod u-s /bin/binary_file
+</code></pre>
+  </li>
+  <li>
+    <p>назначить SGID-бит директории /home/public</p>
+
+    <pre><code>  chmod g+s /home/public
+</code></pre>
+  </li>
+  <li>
+    <p>снять SGID-бит с директории /home/public</p>
+
+    <pre><code>  chmod g-s /home/public
+</code></pre>
+  </li>
+  <li>
+    <p>назначить STIKY-бит директории /home/public. Позволяет удалять файлы только владельцам</p>
+
+    <pre><code>  chmod o+t /home/public
+</code></pre>
+  </li>
+  <li>
+    <p>снять STIKY-бит с директории /home/public</p>
+
+    <pre><code>  chmod o-t /home/public
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-8">Специальные атрибуты файлов</h2>
+
+<ul>
+  <li>
+    <p>позволить открывать файл на запись только в режиме добавления</p>
+
+    <pre><code>  chattr +a file1
+</code></pre>
+  </li>
+  <li>
+    <p>позволяет ядру автоматически сжимать/разжимать содержимое файла</p>
+
+    <pre><code>  chattr +c file1
+</code></pre>
+  </li>
+  <li>
+    <p>указавет утилите dump игнорировать данный файл во время выполнения backup’а</p>
+
+    <pre><code>  chattr +d file1
+</code></pre>
+  </li>
+  <li>
+    <p>делает файл недоступным для любых изменений: редактирование, удаление, перемещение, создание линков на него</p>
+
+    <pre><code>  chattr +i file1
+</code></pre>
+  </li>
+  <li>
+    <p>позволяет сделать удаление файла безопасным, т.е. выставленный атрибут s говорит о том, что при удалении файла, место, занимаемое файлом на диске заполняется нулями, что предотвращяет возможность восстановления данных</p>
+
+    <pre><code>  chattr +s file1
+</code></pre>
+  </li>
+  <li>
+    <p>указывает, что, при сохранении изменений, будет произведена синхронизация, как при выполнении команды sync</p>
+
+    <pre><code>  chattr +S file1
+</code></pre>
+  </li>
+  <li>
+    <p>данный атрибут указывает, что при удалении файла содержимое его будет сохранено и при необходимости пользователь сможет его восстановить</p>
+
+    <pre><code>  chattr +u file1
+</code></pre>
+  </li>
+  <li>
+    <p>показать атрибуты файлов</p>
+
+    <pre><code>  lsattr
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-9">Архивирование и сжатие файлов</h2>
+
+<ul>
+  <li>
+    <p>разжать файл ‘file1.bz2’</p>
+
+    <pre><code>  bunzip2 file1.bz2
+</code></pre>
+  </li>
+  <li>
+    <p>разжать файл ‘file1.gz’</p>
+
+    <pre><code>  gunzip file1.gz
+</code></pre>
+  </li>
+  <li>
+    <p>сжать файл ‘file1’</p>
+
+    <pre><code>  gzip file1 или bzip2 file1
+</code></pre>
+  </li>
+  <li>
+    <p>сжать файл file1 с максимальным сжатием</p>
+
+    <pre><code>  gzip -9 file1
+</code></pre>
+  </li>
+  <li>
+    <p>создать rar-архив ‘file1.rar’ и включить в него файл test_file</p>
+
+    <pre><code>  rar a file1.rar test_file
+</code></pre>
+  </li>
+  <li>
+    <p>создать rar-архив ‘file1.rar’ и включить в него file1, file2 и dir1</p>
+
+    <pre><code>  rar a file1.rar file1 file2 dir1
+</code></pre>
+  </li>
+  <li>
+    <p>распаковать rar-архив</p>
+
+    <pre><code>  unrar x file1.rar
+</code></pre>
+  </li>
+  <li>
+    <p>создать tar-архив archive.tar, содержащий файл file1</p>
+
+    <pre><code>  tar -cvf archive.tar file1
+</code></pre>
+  </li>
+  <li>
+    <p>создать tar-архив archive.tar, содержащий файл file1, file2 и dir1</p>
+
+    <pre><code>  tar -cvf archive.tar file1 file2 dir1
+</code></pre>
+  </li>
+  <li>
+    <p>показать содержимое архива</p>
+
+    <pre><code>  tar -tf archive.tar
+</code></pre>
+  </li>
+  <li>
+    <p>распаковать архив</p>
+
+    <pre><code>  tar -xvf archive.tar
+</code></pre>
+  </li>
+  <li>
+    <p>распаковать архив в /tmp</p>
+
+    <pre><code>  tar -xvf archive.tar -C /tmp
+</code></pre>
+  </li>
+  <li>
+    <p>создать архив и сжать его с помощью bzip2(Прим.переводчика. ключ -j работает не во всех *nix системах)</p>
+
+    <pre><code>  tar -cvfj archive.tar.bz2 dir1
+</code></pre>
+  </li>
+  <li>
+    <p>разжать архив и распаковать его(Прим.переводчика. ключ -j работает не во всех *nix системах)</p>
+
+    <pre><code>  tar -xvfj archive.tar.bz2
+</code></pre>
+  </li>
+  <li>
+    <p>создать архив и сжать его с помощью gzip</p>
+
+    <pre><code>  tar -cvfz archive.tar.gz dir1
+</code></pre>
+  </li>
+  <li>
+    <p>разжать архив и распаковать его</p>
+
+    <pre><code>  tar -xvfz archive.tar.gz
+</code></pre>
+  </li>
+  <li>
+    <p>создать сжатый zip-архив</p>
+
+    <pre><code>  zip file1.zip file1
+</code></pre>
+  </li>
+  <li>
+    <p>создать сжатый zip-архив и со включением в него нескольких файлов и/или директорий</p>
+
+    <pre><code>  zip -r file1.zip file1 file2 dir1
+</code></pre>
+  </li>
+  <li>
+    <p>разжать и распаковать zip-архив</p>
+
+    <pre><code>  unzip file1.zip
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="rpm--fedora-red-hat---">RPM пакеты (Fedora, Red Hat и тому подобное)</h2>
+
+<ul>
+  <li>
+    <p>установить пакет с выводом сообщений и прогресс-бара</p>
+
+    <pre><code>  rpm -ivh package.rpm
+</code></pre>
+  </li>
+  <li>
+    <p>установить пакет с выводом сообщений и прогресс-бара без контроля зависимостей</p>
+
+    <pre><code>  rpm -ivh --nodeps package.rpm
+</code></pre>
+  </li>
+  <li>
+    <p>обновить пакет без изменений конфигурационных файлов, в случае отсутствия пакета, он будет установлен</p>
+
+    <pre><code>  rpm -U package.rpm
+</code></pre>
+  </li>
+  <li>
+    <p>обновить пакет только если он установлен</p>
+
+    <pre><code>  rpm -F package.rpm
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пакет</p>
+
+    <pre><code>  rpm -e package_name.rpm
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить список всех пакетов, установленных в системе</p>
+
+    <pre><code>  rpm -qa
+</code></pre>
+  </li>
+  <li>
+    <p>среди всех пакетов, установленных в системе, найти пакет содержащий в своём имени «httpd»</p>
+
+    <pre><code>  rpm -qa | grep httpd
+</code></pre>
+  </li>
+  <li>
+    <p>вывести информацию о конкрентном пакете</p>
+
+    <pre><code>  rpm -qi package_name
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить пакеты входящие в группу пакетов</p>
+
+    <pre><code>  rpm -qg "System Environment/Daemons"
+</code></pre>
+  </li>
+  <li>
+    <p>вывести список файлов, входящих в пакет</p>
+
+    <pre><code>  rpm -ql package_name
+</code></pre>
+  </li>
+  <li>
+    <p>вывести список конфигурационных файлов, входящих в пакет</p>
+
+    <pre><code>  rpm -qc package_name
+</code></pre>
+  </li>
+  <li>
+    <p>вывести список пакетов, необходимых для установки конкретного пакета по зависимостям</p>
+
+    <pre><code>  rpm -q package_name --whatrequires
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить скрипты, запускаемые при установке/удалении пакета</p>
+
+    <pre><code>  rpm -q package_name --scripts
+</code></pre>
+  </li>
+  <li>
+    <p>вывести историю ревизий пакета</p>
+
+    <pre><code>  rpm -q package_name --changelog
+</code></pre>
+  </li>
+  <li>
+    <p>проверить какому пакету принадлежит указанный файл. Указывать следует полный путь и имя файла</p>
+
+    <pre><code>  rpm -qf /etc/httpd/conf/httpd.conf
+</code></pre>
+  </li>
+  <li>
+    <p>отображает список файлов, входящих в пакет, но ещё не установленных в систему</p>
+
+    <pre><code>  rpm -qp package.rpm -l
+</code></pre>
+  </li>
+  <li>
+    <p>ипортировать публичный ключ цифровой подписи</p>
+
+    <pre><code>  rpm --import /media/cdrom/RPM-GPG-KEY
+</code></pre>
+  </li>
+  <li>
+    <p>проверит подпись пакета</p>
+
+    <pre><code>  rpm --checksig package.rpm
+</code></pre>
+  </li>
+  <li>
+    <p>проверить целостность установленного содержимого пакета</p>
+
+    <pre><code>  rpm -qa gpg-pubkey
+</code></pre>
+  </li>
+  <li>
+    <p>проверить размер, полномочия, тип, владельца, группу, MD5-сумму и дату последнего изменеия пакета</p>
+
+    <pre><code>  rpm -V package_name
+</code></pre>
+  </li>
+  <li>
+    <p>проверить содержимое всех пакеты установленные в систему. Выполняйте с осторожностью!</p>
+
+    <pre><code>  rpm -Va
+</code></pre>
+  </li>
+  <li>
+    <p>проверить пакет, который ещё не установлен в систему</p>
+
+    <pre><code>  rpm -Vp package.rpm
+</code></pre>
+  </li>
+  <li>
+    <p>извлечь из пакета файлы содержащие в своём имени bin</p>
+
+    <pre><code>  rpm2cpio package.rpm | cpio --extract --make-directories *bin*
+</code></pre>
+  </li>
+  <li>
+    <p>установить пакет, собранный из исходных кодов</p>
+
+    <pre><code>  rpm -ivh /usr/src/redhat/RPMS/`arch`/package.rpm
+</code></pre>
+  </li>
+  <li>
+    <p>собрать пакет из исходных кодов</p>
+
+    <pre><code>  rpmbuild --rebuild package_name.src.rpm
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="yum----fedora-redhat---">YUM — средство обновления пакетов(Fedora, RedHat и тому подобное)</h2>
+
+<ul>
+  <li>
+    <p>закачать и установать пакет</p>
+
+    <pre><code>  yum install package_name
+</code></pre>
+  </li>
+  <li>
+    <p>обновить все пакеты, установленные в систему</p>
+
+    <pre><code>  yum update
+</code></pre>
+  </li>
+  <li>
+    <p>обновить пакет</p>
+
+    <pre><code>  yum update package_name
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пакет</p>
+
+    <pre><code>  yum remove package_name
+</code></pre>
+  </li>
+  <li>
+    <p>вывести список всех пакетов, установленных в систему</p>
+
+    <pre><code>  yum list
+</code></pre>
+  </li>
+  <li>
+    <p>найти пакет в репозитории</p>
+
+    <pre><code>  yum search package_name
+</code></pre>
+  </li>
+  <li>
+    <p>очисть rpm-кэш, удалив закачанные пакеты</p>
+
+    <pre><code>  yum clean packages
+</code></pre>
+  </li>
+  <li>
+    <p>удалить все заголовки файлов, которые система использует для разрешения зависимостей</p>
+
+    <pre><code>  yum clean headers
+</code></pre>
+  </li>
+  <li>
+    <p>очисть rpm-кэш, удалив закачанные пакеты и заголовки</p>
+
+    <pre><code>  yum clean all
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="deb--debian-ubuntu---">DEB пакеты (Debian, Ubuntu и тому подобное)</h2>
+
+<ul>
+  <li>
+    <p>установить / обновить пакет</p>
+
+    <pre><code>  dpkg -i package.deb
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пакет из системы</p>
+
+    <pre><code>  dpkg -r package_name
+</code></pre>
+  </li>
+  <li>
+    <p>показать все пакеты, установленные в систему</p>
+
+    <pre><code>  dpkg -l
+</code></pre>
+  </li>
+  <li>
+    <p>среди всех пакетов, установленных в системе, найти пакет содержащий в своём имени «apache2»</p>
+
+    <pre><code>  dpkg -l | | grep apache2
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить инфрмацию о конкретном пакете</p>
+
+    <pre><code>  dpkg -s package_name
+</code></pre>
+  </li>
+  <li>
+    <p>вывести список файлов, входящих в пакет, установленный в систему</p>
+
+    <pre><code>  dpkg -L package_name
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить список файлов, входящих в пакет, который ешё не установлен в систему</p>
+
+    <pre><code>  dpkg --contents package.deb
+</code></pre>
+  </li>
+  <li>
+    <p>найти пакет, в который входит указанный файл</p>
+
+    <pre><code>  dpkg -S /bin/ping
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="apt-----debian-ubuntu---">APT — средство управление пакетами (Debian, Ubuntu и тому подобное)</h2>
+
+<ul>
+  <li>
+    <p>установить / обновить пакет</p>
+
+    <pre><code>  apt-get install package_name
+</code></pre>
+  </li>
+  <li>
+    <p>установить / обновить пакет с cdrom’а</p>
+
+    <pre><code>  apt-cdrom install package_name
+</code></pre>
+  </li>
+  <li>
+    <p>получить обновлённые списки пакетов</p>
+
+    <pre><code>  apt-get update
+</code></pre>
+  </li>
+  <li>
+    <p>обновить пакеты, установленные в систему</p>
+
+    <pre><code>  apt-get upgrade
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пакет, установленный в систему с сохранением файлов конфигурации</p>
+
+    <pre><code>  apt-get remove package_name
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пакет, установленный в систему с удалением файлов конфигурации</p>
+
+    <pre><code>  apt-get purge package_name
+</code></pre>
+  </li>
+  <li>
+    <p>проверить целостность зависимостей</p>
+
+    <pre><code>  apt-get check
+</code></pre>
+  </li>
+  <li>
+    <p>удалить загруженные архивные файлы пакетов</p>
+
+    <pre><code>  apt-get clean
+</code></pre>
+  </li>
+  <li>
+    <p>удалить старые загруженные архивные файлы пакетов</p>
+
+    <pre><code>  apt-get autoclean
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="pacman-----arch-linux-chakra-frugalware--alike">Pacman — средство управление пакетами (Arch Linux, Chakra, Frugalware и alike)</h2>
+
+<ul>
+  <li>
+    <p>установить пакет из репозитория. Если после команды добавить <code>--noconfirm</code>, то не потребуется подтверждать действия.</p>
+
+    <pre><code>  pacman -S package_name
+</code></pre>
+  </li>
+  <li>
+    <p>установить пакет из текущей деиректории</p>
+
+    <pre><code>  pacman -U package_name
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пакет</p>
+
+    <pre><code>  pacman -R package_name
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пакет с зависимостями, которые более не требуются</p>
+
+    <pre><code>  pacman -Rs package_name
+</code></pre>
+  </li>
+  <li>
+    <p>найти пакет</p>
+
+    <pre><code>  pacman -Ss package_name
+</code></pre>
+  </li>
+  <li>
+    <p>получить обновленные списки пакетов</p>
+
+    <pre><code>  pacman -Sy
+</code></pre>
+  </li>
+  <li>
+    <p>обновить пакеты</p>
+
+    <pre><code>  pacman -Su
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-10">Просмотр содержимого файлов</h2>
+
+<ul>
+  <li>
+    <p>вывести содержимое файла file1 на стандартное устройсво вывода</p>
+
+    <pre><code>  cat file1
+</code></pre>
+  </li>
+  <li>
+    <p>вывести содержимое файла file1 на стандартное устройсво вывода в обратном порядке (последняя строка становиться первой и т.д.)</p>
+
+    <pre><code>  tac file1
+</code></pre>
+  </li>
+  <li>
+    <p>постраничный вывод содержимого файла file1 на стандартное устройство вывода</p>
+
+    <pre><code>  more file1
+</code></pre>
+  </li>
+  <li>
+    <p>постраничный вывод содержимого файла file1 на стандартное устройство вывода, но с возможностью пролистывания в обе стороны (вверх-вниз), поиска по содержимому и т.п.</p>
+
+    <pre><code>  less file1
+</code></pre>
+  </li>
+  <li>
+    <p>вывести первые две строки файла file1 на стандартное устройство вывода. По-умолчанию выводится десять строк</p>
+
+    <pre><code>  head -2 file1
+</code></pre>
+  </li>
+  <li>
+    <p>вывести последние две строки файла file1 на стандартное устройство вывода. По-умолчанию выводится десять строк</p>
+
+    <pre><code>  tail -2 file1
+</code></pre>
+  </li>
+  <li>
+    <p>выводить содержимое файла /var/log/messages на стандартное устройство вывода по мере появления в нём текста</p>
+
+    <pre><code>  tail -f /var/log/messages
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-11">Манипуляции с текстом</h2>
+
+<ul>
+  <li>
+    <p>общий синтаксис выполнения действий по обработке содержимого файла и вывода результата в новый</p>
+
+    <pre><code>  cat file_originale | [operation: sed, grep, awk, grep и т.п.] &gt; result.txt
+</code></pre>
+  </li>
+  <li>
+    <p>общий синтаксис выполнения действий по обработке содержимого файла и вывода результата в существующий файл. Если файл не существует, он будет создан</p>
+
+    <pre><code>  cat file_originale | [operazione: sed, grep, awk, grepи т.п.] &gt;&gt; result.txt
+</code></pre>
+  </li>
+  <li>
+    <p>из файла ‘/var/log/messages’ отобрать и вывести на стандартное устройство вывода строки, содержащие «Aug»</p>
+
+    <pre><code>  grep Aug /var/log/messages
+</code></pre>
+  </li>
+  <li>
+    <p>из файла ‘/var/log/messages’ отобрать и вывести на стандартное устройство вывода строки, начинающиеся на «Aug»</p>
+
+    <pre><code>  grep ^Aug /var/log/messages
+</code></pre>
+  </li>
+  <li>
+    <p>из файла ‘/var/log/messages’ отобрать и вывести на стандартное устройство вывода строки, содержащие цифры</p>
+
+    <pre><code>  grep [0-9] /var/log/messages
+</code></pre>
+  </li>
+  <li>
+    <p>отобрать и вывести на стандартное устройство вывода строки, содержащие «Augr», во всех файлах, находящихся в директории /var/log и ниже</p>
+
+    <pre><code>  grep Aug -R /var/log/*
+</code></pre>
+  </li>
+  <li>
+    <p>в файле example.txt заменить «string1» на «string2», результат вывести на стандартное устройство вывода</p>
+
+    <pre><code>  sed 's/stringa1/stringa2/g' example.txt
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пустые строки из файла example.txt</p>
+
+    <pre><code>  sed '/^$/d' example.txt
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пустые строки и комментарии из файла example.txt</p>
+
+    <pre><code>  sed '/ *#/d; /^$/d' example.txt
+</code></pre>
+  </li>
+  <li>
+    <p>преобразовать символы из нижнего регистра в верхний</p>
+
+    <pre><code>  echo 'esempio' | tr '[:lower:]' '[:upper:]'
+</code></pre>
+  </li>
+  <li>
+    <p>удалить первую строку из файла example.txt</p>
+
+    <pre><code>  sed -e '1d' result.txt
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить только строки содержашие «string1»</p>
+
+    <pre><code>  sed -n '/string1/p'
+</code></pre>
+  </li>
+  <li>
+    <p>удалить пустые символы в в конце каждой строки</p>
+
+    <pre><code>  sed -e 's/ *$//' example.txt
+</code></pre>
+  </li>
+  <li>
+    <p>удалить строку «string1» из текста не изменяя всего остального</p>
+
+    <pre><code>  sed -e 's/string1//g' example.txt
+</code></pre>
+  </li>
+  <li>
+    <p>взять из файла с первой по восьмую строки и из них вывести первые пять</p>
+
+    <pre><code>  sed -n '1,8p;5q' example.txt
+</code></pre>
+  </li>
+  <li>
+    <p>вывести пятую строку</p>
+
+    <pre><code>  sed -n '5p;5q' example.txt
+</code></pre>
+  </li>
+  <li>
+    <p>заменить последовательность из любого количества нулей одним нулём</p>
+
+    <pre><code>  sed -e 's/0*/0/g' example.txt
+</code></pre>
+  </li>
+  <li>
+    <p>пронумеровать строки при выводе содержимого файла</p>
+
+    <pre><code>  cat -n file1
+</code></pre>
+  </li>
+  <li>
+    <p>при выводе содержимого файла, не выводить чётные строки файла</p>
+
+    <pre><code>  cat example.txt | awk 'NR%2==1'
+</code></pre>
+  </li>
+  <li>
+    <p>вывести первую колонку. Разделение, по-умолчанию, по проблелу/пробелам или символу/символам табуляции</p>
+
+    <pre><code>  echo a b c | awk '{print $1}'
+</code></pre>
+  </li>
+  <li>
+    <p>вывести первую и треью колонки. Разделение, по-умолчанию, по проблелу/пробелам или символу/символам табуляции</p>
+
+    <pre><code>  echo a b c | awk '{print $1,$3}'
+</code></pre>
+  </li>
+  <li>
+    <p>объединить содержимое file1 и file2 в виде таблицы: строка 1 из file1 = строка 1 колонка 1-n, строка 1 из file2 = строка 1 колонка n+1-m</p>
+
+    <pre><code>  paste file1 file2
+</code></pre>
+  </li>
+  <li>
+    <p>объединить содержимое file1 и file2 в виде таблицы с разделителем «+»</p>
+
+    <pre><code>  paste -d '+' file1 file2
+</code></pre>
+  </li>
+  <li>
+    <p>отсортировать содержимое двух файлов</p>
+
+    <pre><code>  sort file1 file2
+</code></pre>
+  </li>
+  <li>
+    <p>отсортировать содержимое двух файлов, не отображая повторов</p>
+
+    <pre><code>  sort file1 file2 | uniq
+</code></pre>
+  </li>
+  <li>
+    <p>отсортировать содержимое двух файлов, отображая только уникальные строки (строки, встречающиеся в обоих файлах, не выводятся на стандартное устройство вывода)</p>
+
+    <pre><code>  sort file1 file2 | uniq -u
+</code></pre>
+  </li>
+  <li>
+    <p>отсортировать содержимое двух файлов, отображая только повторяющиеся строки</p>
+
+    <pre><code>  sort file1 file2 | uniq -d
+</code></pre>
+  </li>
+  <li>
+    <p>сравнить содержимое двух файлов, не отображая строки принадлежащие файлу ‘file1’</p>
+
+    <pre><code>  comm -1 file1 file2
+</code></pre>
+  </li>
+  <li>
+    <p>сравнить содержимое двух файлов, не отображая строки принадлежащие файлу ‘file2’</p>
+
+    <pre><code>  comm -2 file1 file2
+</code></pre>
+  </li>
+  <li>
+    <p>сравнить содержимое двух файлов, удаляя строки встречающиеся в обоих файлах</p>
+
+    <pre><code>  comm -3 file1 file2
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-12">Преобразование наборов символов и файловых форматов</h2>
+
+<ul>
+  <li>
+    <p>конвертировать файл текстового формата из MSDOS в UNIX (разница в символах возврата коретки)</p>
+
+    <pre><code>  dos2unix filedos.txt fileunix.txt
+</code></pre>
+  </li>
+  <li>
+    <p>конвертировать файл текстового формата из UNIX в MSDOS (разница в символах возврата коретки)</p>
+
+    <pre><code>  unix2dos fileunix.txt filedos.txt
+</code></pre>
+  </li>
+  <li>
+    <p>конвертировать содержимое тестового файла page.txt в html-файл page.html</p>
+
+    <pre><code>  recode ..HTML &lt; page.txt &gt; page.html
+</code></pre>
+  </li>
+  <li>
+    <p>вывести список доступных форматов</p>
+
+    <pre><code>  recode -l | more
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-13">Анализ файловых систем</h2>
+
+<ul>
+  <li>
+    <p>проверить раздел hda1 на наличие bad-блоков</p>
+
+    <pre><code>  badblocks -v /dev/hda1
+</code></pre>
+  </li>
+  <li>
+    <p>проверить/восстановить целостность linux-файловой системы раздела hda1</p>
+
+    <pre><code>  fsck /dev/hda1
+</code></pre>
+  </li>
+  <li>
+    <p>проверить/восстановить целостность файловой системы ext2 раздела hda1</p>
+
+    <pre><code>  fsck.ext2 /dev/hda1 или e2fsck /dev/hda1
+</code></pre>
+  </li>
+  <li>
+    <p>проверить/восстановить целостность файловой системы ext3 раздела hda1 с указанием, что журнал расположен там же</p>
+
+    <pre><code>  e2fsck -j /dev/hda1
+</code></pre>
+  </li>
+  <li>
+    <p>проверить/восстановить целостность файловой системы ext3 раздела hda1</p>
+
+    <pre><code>  fsck.ext3 /dev/hda1
+</code></pre>
+  </li>
+  <li>
+    <p>проверить/восстановить целостность файловой системы fat раздела hda11</p>
+
+    <pre><code>  fsck.vfat /dev/hda1
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-14">Форматирование файловых систем</h2>
+
+<ul>
+  <li>
+    <p>создать linux-файловую систему на разделе hda1</p>
+
+    <pre><code>  mkfs /dev/hda1
+</code></pre>
+  </li>
+  <li>
+    <p>создать файловую систему ext2 на разделе hda1</p>
+
+    <pre><code>  mke2fs /dev/hda1
+</code></pre>
+  </li>
+  <li>
+    <p>создать журналирующую файловую систему ext3 на разделе hda1</p>
+
+    <pre><code>  mke2fs -j /dev/hda1
+</code></pre>
+  </li>
+  <li>
+    <p>создать файловую систему FAT32 на разделе hda1</p>
+
+    <pre><code>  mkfs -t vfat 32 -F /dev/hda1
+</code></pre>
+  </li>
+  <li>
+    <p>форматирование флоппи-диска без проверки</p>
+
+    <pre><code>  fdformat -n /dev/fd0
+</code></pre>
+  </li>
+  <li>
+    <p>создание swap-пространства на разделе hda3</p>
+
+    <pre><code>  mkswap /dev/hda3
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="swap-">swap-пространство</h2>
+
+<ul>
+  <li>
+    <p>создание swap-пространства на разделе hda3</p>
+
+    <pre><code>  mkswap /dev/hda3
+</code></pre>
+  </li>
+  <li>
+    <p>активировать swap-пространство, расположенное на разделе hda3</p>
+
+    <pre><code>  swapon /dev/hda3
+</code></pre>
+  </li>
+  <li>
+    <p>активировать swap-пространства, расположенные на разделах hda2 и hdb3</p>
+
+    <pre><code>  swapon /dev/hda2 /dev/hdb3
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="backup">Создание резервных копий (backup)</h2>
+
+<ul>
+  <li>
+    <p>создать полную резервную копию директории /home в файл /tmp/home0.bak</p>
+
+    <pre><code>  dump -0aj -f /tmp/home0.bak /home
+</code></pre>
+  </li>
+  <li>
+    <p>создать инкрементальную резервную копию директории /home в файл </p>
+
+    <pre><code>  dump -1aj -f /tmp/home0.bak /home
+</code></pre>
+  </li>
+  <li>
+    <p>восстановить из резервной копии /tmp/home0.bak</p>
+
+    <pre><code>  restore -if /tmp/home0.bak
+</code></pre>
+  </li>
+  <li>
+    <p>синхронизировать /tmp с /home</p>
+
+    <pre><code>  rsync -rogpav --delete /home /tmp
+</code></pre>
+  </li>
+  <li>
+    <p>синхронизировать через SSH-туннель</p>
+
+    <pre><code>  rsync -rogpav -e ssh --delete /home ip_address:/tmp
+</code></pre>
+  </li>
+  <li>
+    <p>синхронизировать локальную директорию с удалённой директорией через ssh-туннель со сжатием</p>
+
+    <pre><code>  rsync -az -e ssh --delete ip_addr:/home/public /home/local
+</code></pre>
+  </li>
+  <li>
+    <p>синхронизировать удалённую директорию с локальной директорией через ssh-туннель со сжатием</p>
+
+    <pre><code>  rsync -az -e ssh --delete /home/local ip_addr:/home/public
+</code></pre>
+  </li>
+  <li>
+    <p>сделать «слепок» локального диска в файл на удалённом компьютере через ssh-туннель</p>
+
+    <pre><code>  dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr 'dd of=hda.gz'
+</code></pre>
+  </li>
+  <li>
+    <p>создать инкрементальную резервную копию директории ‘/home/user’ в файл backup.tar с сохранением полномочий</p>
+
+    <pre><code>  tar -Puf backup.tar /home/user
+</code></pre>
+  </li>
+  <li>
+    <p>копирование содержимого /tmp/local на удалённый компьютер через ssh-туннель в /home/share/</p>
+
+    <pre><code>  ( cd /tmp/local/ &amp;&amp; tar c . ) | ssh -C user@ip_addr 'cd /home/share/ &amp;&amp; tar x -p'
+</code></pre>
+  </li>
+  <li>
+    <p>копирование содержимого /home на удалённый компьютер через ssh-туннель в /home/backup-home</p>
+
+    <pre><code>  ( tar c /home ) | ssh -C user@ip_addr 'cd /home/backup-home &amp;&amp; tar x -p'
+</code></pre>
+  </li>
+  <li>
+    <p>копирование одной директории в другую с сохранением полномочий и линков</p>
+
+    <pre><code>  tar cf - . | (cd /tmp/backup ; tar xf - )
+</code></pre>
+  </li>
+  <li>
+    <p>поиск в /home/user1 всех файлов, имена которых оканчиваются на ‘.txt’, и копирование их в другую директорию</p>
+
+    <pre><code>  find /home/user1 -name '*.txt' | xargs cp -av --target-directory=/home/backup/ --parents
+</code></pre>
+  </li>
+  <li>
+    <p>поиск в /var/log всех файлов, имена которых оканчиваются на ‘.log’, и создание bzip-архива из них</p>
+
+    <pre><code>  find /var/log -name '*.log' | tar cv --files-from=- | bzip2 &gt; log.tar.bz2
+</code></pre>
+  </li>
+  <li>
+    <p>создать копию MBR (Master Boot Record) с /dev/hda на флоппи-диск</p>
+
+    <pre><code>  dd if=/dev/hda of=/dev/fd0 bs=512 count=1
+</code></pre>
+  </li>
+  <li>
+    <p>восстановить MBR с флоппи-диска на /dev/hda</p>
+
+    <pre><code>  dd if=/dev/fd0 of=/dev/hda bs=512 count=1
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-15">Сеть</h2>
+
+<ul>
+  <li>
+    <p>показать конфигурацию сетевого интерфейса eth0</p>
+
+    <pre><code>  ifconfig eth0
+</code></pre>
+  </li>
+  <li>
+    <p>активировать (поднять) интерфейс eth0</p>
+
+    <pre><code>  ifup eth0
+</code></pre>
+  </li>
+  <li>
+    <p>деактивировать (опустить) интерфейс eth0</p>
+
+    <pre><code>  ifdown eth0
+</code></pre>
+  </li>
+  <li>
+    <p>выставить интерфейсу eth0 ip-адрес и маску подсети</p>
+
+    <pre><code>  ifconfig eth0 192.168.1.1 netmask 255.255.255.0
+</code></pre>
+  </li>
+  <li>
+    <p>перевести интерфейс eth0 в promiscuous-режим для «отлова» пакетов (sniffing)</p>
+
+    <pre><code>  ifconfig eth0 promisc
+</code></pre>
+  </li>
+  <li>
+    <p>отключить promiscuous-режим на интерфейсе eth0</p>
+
+    <pre><code>  ifconfig eth0 -promisc
+</code></pre>
+  </li>
+  <li>
+    <p>активировать интерфейс eth0 в dhcp-режиме.</p>
+
+    <pre><code>  dhclient eth0
+</code></pre>
+  </li>
+  <li>
+    <p>вывести локальную таблицу маршрутизации</p>
+
+    <pre><code>  route -n
+</code></pre>
+  </li>
+  <li>
+    <p>задать ip-адрес шлюза по умолчанию (default gateway)</p>
+
+    <pre><code>  route add -net 0/0 gw IP_Gateway 
+</code></pre>
+  </li>
+  <li>
+    <p>добавить статический маршрут в сеть 192.168.0.0/16 через шлюз с ip-адресом 192.168.1.1</p>
+
+    <pre><code>  route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1
+</code></pre>
+  </li>
+  <li>
+    <p>удалить ip-адрес шлюза по умолчанию (default gateway)</p>
+
+    <pre><code>  route del 0/0 gw IP_gateway
+</code></pre>
+  </li>
+  <li>
+    <p>разрешить пересылку пакетов (forwarding)</p>
+
+    <pre><code>  echo "1" &gt; /proc/sys/net/ipv4/ip_forward
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить имя компьютера</p>
+
+    <pre><code>  hostname
+</code></pre>
+  </li>
+  <li>
+    <p>разрешить имя http://www.linuxguide.it хоста в ip-адрес и наоборот</p>
+
+    <pre><code>  host http://www.linuxguide.it
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить состояние всех интерфейсов</p>
+
+    <pre><code>  ip link show
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить статус и тип соединения для интерфейса eth0</p>
+
+    <pre><code>  mii-tool eth0
+</code></pre>
+  </li>
+  <li>
+    <p>отображает статистику интерфеса eth0 с выводом такой информации, как поддерживаемые и текущие режимы соединения</p>
+
+    <pre><code>  ethtool eth0
+</code></pre>
+  </li>
+  <li>
+    <p>отображает все установленные сетевые соединения по протоколам TCP и UDP без разрешения имён в ip-адреса и PID’ы и имена процессов, обеспечивающих эти соединения</p>
+
+    <pre><code>  netstat -tupn
+</code></pre>
+  </li>
+  <li>
+    <p>отображает все сетевые соединения по протоколам TCP и UDP без разрешения имён в ip-адреса и PID’ы и имена процессов, слушающих порты</p>
+
+    <pre><code>  netstat -tupln
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить весь трафик на TCP-порт 80 (обычно — HTTP)</p>
+
+    <pre><code>  tcpdump tcp port 80
+</code></pre>
+  </li>
+  <li>
+    <p>просканировать эфир на предмет, доступности беспроводных точек доступа</p>
+
+    <pre><code>  iwlist scan
+</code></pre>
+  </li>
+  <li>
+    <p>показать конфигурацию беспроводного сетевого интерфейса eth1</p>
+
+    <pre><code>  iwconfig eth1
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="microsoft-windows-networkssamba">Microsoft Windows networks(SAMBA)</h2>
+
+<ul>
+  <li>
+    <p>разрешить netbios-имя nbtscan не во всех системах ставится по-умолчанию, возможно, придётся доустанавливать вручную. nmblookup включен в пакет samba</p>
+
+    <pre><code>  nmblookup -A ip_addr
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить ресурсы, предоставленные в общий доступ на windows-машине</p>
+
+    <pre><code>  smbclient -L ip_addr/hostname
+</code></pre>
+  </li>
+  <li>
+    <p>подобно wget может получить файлы с windows-машин через smb-протокол</p>
+
+    <pre><code>  smbget -Rr smb://ip_addr/share
+</code></pre>
+  </li>
+  <li>
+    <p>смонтировать smb-ресурс, предоставленный на windows-машине, в локальную файловую систему</p>
+
+    <pre><code>  mount -t smbfs -o username=user,password=pass //winclient/share /mnt/share
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="iptables-firewall">IPTABLES (firewall)</h2>
+
+<ul>
+  <li>
+    <p>отобразить все цепочки правил</p>
+
+    <pre><code>  iptables -nL
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить все цепочки правил в NAT-таблице</p>
+
+    <pre><code>  iptables -t nat -L
+</code></pre>
+  </li>
+  <li>
+    <p>очистить все цепочки правил в filter-таблице</p>
+
+    <pre><code>  iptables -t filter -F
+</code></pre>
+  </li>
+  <li>
+    <p>очистить все цепочки правил в NAT-таблице</p>
+
+    <pre><code>  iptables -t nat -F
+</code></pre>
+  </li>
+  <li>
+    <p>удалить все пользовательские цепочки правил в filter-таблице</p>
+
+    <pre><code>  iptables -t filter -X
+</code></pre>
+  </li>
+  <li>
+    <p>позволить входящее подключение telnet’ом</p>
+
+    <pre><code>  iptables -t filter -A INPUT -p tcp --dport telnet -j ACCEPT
+</code></pre>
+  </li>
+  <li>
+    <p>блокировать исходящие HTTP-соединения</p>
+
+    <pre><code>  iptables -t filter -A OUTPUT -p tcp --dport http -j DROP
+</code></pre>
+  </li>
+  <li>
+    <p>позволить «прокидывать» (forward) POP3-соединения</p>
+
+    <pre><code>  iptables -t filter -A FORWARD -p tcp --dport pop3 -j ACCEPT
+</code></pre>
+  </li>
+  <li>
+    <p>включить журналирование ядром пакетов, проходящих через цепочку INPUT, и добавлением к сообщению префикса «DROP INPUT»</p>
+
+    <pre><code>  iptables -t filter -A INPUT -j LOG --log-prefix "DROP INPUT"
+</code></pre>
+  </li>
+  <li>
+    <p>включить NAT (Network Address Translate) исходящих пакетов на интерфейс eth0. Допустимо при использовании с динамически выделяемыми ip-адресами</p>
+
+    <pre><code>  iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+</code></pre>
+  </li>
+  <li>
+    <p>перенаправление пакетов, адресованных одному хосту, на другой хост</p>
+
+    <pre><code>  iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m tcp --dport 22 -j DNAT --to-destination 10.0.0.2:22
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-16">Мониторинг и отладка</h2>
+
+<ul>
+  <li>
+    <p>отобразить запущенные процессы, используемые ими ресурсы и другую полезную информацию (с автоматическим обновлением данных)</p>
+
+    <pre><code>  top
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить запущенные процессы, используемые ими ресурсы и другую полезную информацию (единожды)</p>
+
+    <pre><code>  ps -eafw
+</code></pre>
+  </li>
+  <li>
+    <p>вывести PID’ы и процессы в виде дерева</p>
+
+    <pre><code>  ps -e -o pid,args --forest
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить дерево процессов</p>
+
+    <pre><code>  pstree
+</code></pre>
+  </li>
+  <li>
+    <p>«убить» процесс с PID 98989 «на смерть» (без соблюдения целостности данных)</p>
+
+    <pre><code>  kill -9 98989 или kill -KILL 98989
+</code></pre>
+  </li>
+  <li>
+    <p>корректно завершить процесс с PID 98989</p>
+
+    <pre><code>  kill -TERM 98989
+</code></pre>
+  </li>
+  <li>
+    <p>заставить процесс с PID 98989 перепрочитать файл конфигурации</p>
+
+    <pre><code>  kill -1 98989 или kill -HUP 98989
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить список файлов, открытых процессом с PID 98989</p>
+
+    <pre><code>  lsof -p 98989
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить список открытых файлов из директории /home/user1</p>
+
+    <pre><code>  lsof /home/user1
+</code></pre>
+  </li>
+  <li>
+    <p>вывести список системных вызовов, созданных и полученных процессом ls</p>
+
+    <pre><code>  strace -c ls &gt;/dev/null
+</code></pre>
+  </li>
+  <li>
+    <p>вывести вызовы бибилотек</p>
+
+    <pre><code>  strace -f -e open ls &gt;/dev/null
+</code></pre>
+  </li>
+  <li>
+    <p>отображать прерывания в режиме реального времени</p>
+
+    <pre><code>  watch -n1 'cat /proc/interrupts'
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить историю перезагрузок системы</p>
+
+    <pre><code>  last reboot
+</code></pre>
+  </li>
+  <li>
+    <p>отобразить историю регистрации пользователя user1 в системе и время его нахождения в ней</p>
+
+    <pre><code>  last user1
+</code></pre>
+  </li>
+  <li>
+    <p>вывести загруженные модули ядра</p>
+
+    <pre><code>  lsmod
+</code></pre>
+  </li>
+  <li>
+    <p>показать состояние оперативной памяти в мегабайтах</p>
+
+    <pre><code>  free -m
+</code></pre>
+  </li>
+  <li>
+    <p>контроль состояния жёсткого диска /dev/hda через SMART</p>
+
+    <pre><code>  smartctl -A /dev/hda
+</code></pre>
+  </li>
+  <li>
+    <p>проверить доступность SMART на жёстком диске /dev/hda</p>
+
+    <pre><code>  smartctl -i /dev/hda
+</code></pre>
+  </li>
+  <li>
+    <p>вывести десять последних записей из журнала загрузки ядра</p>
+
+    <pre><code>  tail /var/log/dmesg
+</code></pre>
+  </li>
+  <li>
+    <p>вывести десять последних записей из системного журнала</p>
+
+    <pre><code>  tail /var/log/messages
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="section-17">Другие полезные команды</h2>
+
+<ul>
+  <li>
+    <p>вывести список комманд, которые так или иначе относятся к ключевым словам. Полезно, когда вы знаете что делает программа, но не помните команду</p>
+
+    <pre><code>  apropos …keyword
+</code></pre>
+  </li>
+  <li>
+    <p>вызов руководства по работе с программой, в данном случае, — ping</p>
+
+    <pre><code>  man ping
+</code></pre>
+  </li>
+  <li>
+    <p>отображает описание действий указанной программы</p>
+
+    <pre><code>  whatis …keyword
+</code></pre>
+  </li>
+  <li>
+    <p>создаёт загрузочный флоппи-диск</p>
+
+    <pre><code>  mkbootdisk --device /dev/fd0 `uname -r`
+</code></pre>
+  </li>
+  <li>
+    <p>зашифровать файл file1 с помощью GNU Privacy Guard</p>
+
+    <pre><code>  gpg -c file1
+</code></pre>
+  </li>
+  <li>
+    <p>дешифровать файл file1 с помощью GNU Privacy Guard</p>
+
+    <pre><code>  gpg file1.gpg
+</code></pre>
+  </li>
+  <li>
+    <p>загружает рекурсивно содержимое сайта http://www.example.com</p>
+
+    <pre><code>  wget -r http://www.example.com
+</code></pre>
+  </li>
+  <li>
+    <p>загрузить файл http://www.example.com/file.iso с возможностью останова и продолжения в последствии</p>
+
+    <pre><code>  wget -c http://www.example.com/file.iso
+</code></pre>
+  </li>
+  <li>
+    <p>начать закачку в указанное время</p>
+
+    <pre><code>  echo 'wget -c http://www.example.com/files.iso' | at 09:00
+</code></pre>
+  </li>
+  <li>
+    <p>вывести список библиотек, необходимых для работы ssh</p>
+
+    <pre><code>  ldd /usr/bin/ssh
+</code></pre>
+  </li>
+  <li>
+    <p>назначить алиас hh команде history</p>
+
+    <pre><code>  alias hh='history'
+</code></pre>
+  </li>
+</ul>
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | +7 (812) 380-24-97 |  ICQ: 634804320 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>
