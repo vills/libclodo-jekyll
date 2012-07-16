@@ -91,7 +91,7 @@
 
 						{% for cat in site.categories %}
 							{% capture current %}{{ cat | first }}{% endcapture %}
-							<div class="category1item"><a href="/{{ current | catname2link }}">{{ current }}</a></div>
+							<div class="category1item"><a href="/{{ current | catname2link }}/">{{ current }}</a></div>
 
 							{% if current == page.category %}
 								<div class="category2item">
